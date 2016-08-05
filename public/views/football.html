@@ -1,0 +1,66 @@
+
+<div>
+	<ul class="nav nav-tabs">
+		<li class="active"><a class="mpb-link" href="qb.php?week=draft" rel="nofollow">QB</a></li>
+		<li><a class="mpb-link" href="rb.php?week=draft" rel="nofollow">RB</a></li>
+		<li><a class="mpb-link" href="wr.php?week=draft" rel="nofollow">WR</a></li>
+		<li><a class="mpb-link" href="te.php?week=draft" rel="nofollow">TE</a></li>
+		<li><a class="mpb-link" href="k.php?week=draft" rel="nofollow">K</a></li>
+    </ul>
+</div>
+
+<div ng-app="Football" ng-controller="ctlr" class="mobile-table">
+    <table st-table="rowCollection" cellpadding="0" cellspacing="0" border="0" id="data" class="table table-bordered table-condensed table-striped table-hover tablesorter">
+        <thead>
+            <tr>
+            	<td data-column="0">&nbsp;</td>
+            	<td colspan="5" style="text-align:center;" data-column="1"><small><b>PASSING</b></small></td>
+            	<td colspan="3" style="text-align:center;" data-column="6"><small><b>RUSHING</b></small></td>
+            	<td colspan="3" style="text-align:center;" data-column="6"><small><b>RECEIVING</b></small></td>
+            	<td colspan="3" style="text-align:center;" data-column="9"><small><b>MISC</b></small></td>
+            </tr>
+            <tr class="tablesorter-header">
+            	<th style="width:200px" data-column="0" class="tablesorter-header">
+            		<div class="tablesorter-header-inner">Player</div>
+            	</th>
+            	<th style="width:50px;" data-column="1" class="tablesorter-header">
+            		<div class="tablesorter-header-inner"><small>ATT</small></div>
+            	</th>
+				<th style="width:50px;" data-column="2" class="tablesorter-header"><div class="tablesorter-header-inner"><small>COMP</small></div></th>
+				<th style="width:50px;" data-column="3" class="tablesorter-header"><div class="tablesorter-header-inner"><small>PASS YDS</small></div></th>
+				<th style="width:50px;" data-column="4" class="tablesorter-header"><div class="tablesorter-header-inner"><small>PASS TD</small></div></th>
+				<th style="width:50px;" data-column="5" class="tablesorter-header"><div class="tablesorter-header-inner"><small>INT</small></div></th>
+				<th style="width:50px;" data-column="6" class="tablesorter-header"><div class="tablesorter-header-inner"><small>RUSH</small></div></th>
+				<th style="width:50px;" data-column="7" class="tablesorter-header"><div class="tablesorter-header-inner"><small>RUSH YDS</small></div></th>
+				<th style="width:50px;" data-column="8" class="tablesorter-header"><div class="tablesorter-header-inner"><small>RUSH TD</small></div></th>
+				<th style="width:50px;" data-column="9" class="tablesorter-header"><div class="tablesorter-header-inner"><small>REC</small></div></th>
+				<th style="width:50px;" data-column="10" class="tablesorter-header"><div class="tablesorter-header-inner"><small>REC YDS</small></div></th>
+				<th style="width:50px;" data-column="11" class="tablesorter-header"><div class="tablesorter-header-inner"><small>REC TD</small></div></th>
+				<th style="width:50px;" data-column="12" class="tablesorter-header"><div class="tablesorter-header-inner"><small>FL</small></div></th>
+				<th style="width:50px;" data-column="13" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>FPTS</small></div></th>
+				<th style="width:50px;" data-column="14" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>ST MARY</small></div></th>
+			</tr>          
+		</thead>
+        <tbody class="">
+          	<tr class="" ng-repeat="row in rowCollection">
+          		<td><a href="#">{{row.name}}</a><small style="color:#888888;"> {{row.pos}}, {{row.team}}</small></td>
+				<!--<td>{{row.pos}}</td>
+				<td>{{row.team}}</td>-->
+				<td>{{row.att}}</td>
+				<td>{{row.comp}}</td>
+				<td>{{row.p_yds}}</td>
+				<td>{{row.p_td}}</td>
+				<td>{{row.int}}</td>
+				<td>{{row.rush}}</td>
+				<td>{{row.ru_yds}}</td>
+				<td>{{row.ru_td}}</td>
+				<td>{{row.rec}}</td>
+				<td>{{row.re_yds}}</td>
+				<td>{{row.re_td}}</td>
+				<td>{{row.fl}}</td>
+				<td>{{row.fpts}}</td>
+				<td>{{st_marys(row.p_td, row.ru_td, row.re_td)}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

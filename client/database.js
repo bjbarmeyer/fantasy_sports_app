@@ -18,29 +18,22 @@ var db = pgp(config.postgres_url);
 
 initializeTables = function(){
 
-	var query1 = "CREATE TABLE Houses(" + 
-		"h_id SERIAL PRIMARY KEY," +
+	var query1 = "CREATE TABLE Player(" + 
+		"id SERIAL PRIMARY KEY," +
 		"name char(50) NOT NULL," +
-		"motto char(50) NOT NULL," +
-		"location char(50) NOT NULL," +
-		"banner char(20) NOT NULL" +
+		"pos char(2) NOT NULL," +
+		"team char(3) NOT NULL," +
+    "c_a char(10) NOT NULL," +
+    "p_yds FLOAT NOT NULL," +
+    "p_td FLOAT NOT NULL," +
+    "int FLOAT NOT NULL," +
+    "rush FLOAT NOT NULL," +
+    "ru_yds FLOAT NOT NULL," +
+    "ru_tds FLOAT NOT NULL," +
+    "rec FLOAT NOT NULL," +
+    "re_yds FLOAT NOT NULL," +
+    "re_tds FLOAT NOT NULL," +
 		");";
-
-	var query2 = "CREATE TABLE People(" + 
-		"p_id SERIAL PRIMARY KEY," +
-	    "name char(50) NOT NULL," +
-	    "house_id serial REFERENCES Houses(h_id) NOT NULL" +
-	    ");";
-
-	var query_last = "CREATE TABLE Answers(" +
-		"a_id SERIAL PRIMARY KEY," +
-		"gender char(10) NOT NULL," +
-		"eye_color char(15) NOT NULL," +
-		"hair_color char(15) NOT NULL," +
-		"weather char(15) NOT NULL," +
-		"vals char(20) NOT NULL," +
-		"power char(50) NOT NULL" +
-		");"
 
 
 	db.any(query1)
@@ -51,34 +44,24 @@ initializeTables = function(){
 	       console.log(error);
 	    });
 
-  	db.any(query2)
-	    .then(function (data) {
-	        console.log(data);
-	    })
-	    .catch(function (error) {
-	       console.log(error);
-	    });
-
-	db.any(query_last)
-	    .then(function (data) {
-	        console.log(data);
-	    })
-	    .catch(function (error) {
-	       console.log(error);
-	    });
-
 }
 
-matchHouse = function(g, e, h, w, v, p, done){
+addPlayer = function(name, pos, team, c_a, p_yds, p_td, int, rush, ru_yds, ru_tds, rec, re_yds, re_tds, done){
 	var query = "INSERT INTO Answers" +
-				 "(gender, eye_color, hair_color, weather, vals, power) " + 
+				 "(name, pos, team, c_a, p_yds, p_td, int, rush, ru_yds, ru_tds, rec, re_yds, re_tds, done) " + 
 				 "VALUES ('"
-				 	+ g + "', '"
-				 	+ e + "', '" 
-				 	+ h + "', '"
-				 	+ w + "', '"
-				 	+ v + "', '"
-				 	+ p + "');";
+				 	+ name + "', '"
+				 	+ pos + "', '" 
+				 	+ team + "', '"
+				 	+ c_a + "', '"
+				 	+ p_yds + "', '"
+          + p_tds + "', '"
+          + rush + "', '"
+          + ru_yds + "', '"
+          + ru_tds + "', '"
+          + rec + "', '"
+          + re_yds + "', '"
+				 	+ re_tds + "');";
 	db.any(query)
     .then(function (data) {
     	console.log(data);
@@ -90,26 +73,7 @@ matchHouse = function(g, e, h, w, v, p, done){
     });
 }
 
-addHouse = function(n, m, l, b, done){
-	var query = "INSERT INTO Houses" +
-				 "(name, motto, location, banner) " + 
-				 "VALUES ('"
-				 	+ n + "', '"
-				 	+ m + "', '" 
-				 	+ l + "', '"
-				 	+ b + "');";
-	db.any(query)
-    .then(function (data) {
-    	console.log(data);
-        done(true);
-    })
-    .catch(function (error) {
-    	console.log(error);
-    	done(false);
-    });
-}
-
-getHouse = function(n, done){
+/*getHouse = function(n, done){
   var query = "SELECT * FROM Houses " +
               "WHERE name = '"+ n +"';";
 
@@ -183,15 +147,11 @@ getPeopleInHouse = function(h, done){
     });
 
 }
-
+*/
 
 module.exports = {
 	instance: db,
 	initializeTables: initializeTables,
-	addHouse: addHouse,
-	getHouse: getHouse,
-	addPerson: addPerson,
-	getPerson: getPerson,
-  	getPeopleInHouse: getPeopleInHouse
+	addPlayer: addPlayer
 
 }

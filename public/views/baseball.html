@@ -1,0 +1,42 @@
+
+<div>
+
+	<form>
+		<fieldset class="form-group" style="width:500px">
+    		<label for="order">How many orders?</label>
+			<input id="num_orders" class="form-control col-sm-offset-0" type="number" >
+	  	</fieldset>
+
+		<div ng-click="ctlr.createOrders()" class="btn btn-primary">Create Orders</div>
+	</form>
+	<br>
+
+	<form class="form-horizontal" style="width:400px">
+
+		<fieldset class="form-group">
+		    <label for="order">Categories</label>
+		    <select class="form-control" id="categorySelect">
+			    <option value="all">All Categories</option>
+				<option ng-repeat="category in ctlr.categories" value="{{category.id}}">
+				   {{category.name}}
+				</option>
+		    </select>
+	  	</fieldset>
+		
+		<div ng-click="ctlr.runQuery()" class="btn btn-primary">Run Query</div>
+		<br><br>
+
+	</form>
+</div>
+
+<div style="position: relative; width: {{ctlr.width}}px;">
+	<div ng-click="ctlr.refresh()" class="btn btn-primary">Refresh</div>
+	<div ng-click="ctlr.refresh()" style="position: absolute; right: 0;" class="btn btn-primary">Refresh</div>
+
+	<div id="table">
+
+	</div>
+
+	<div ng-click="ctlr.refresh()" class="btn btn-primary">Refresh</div>
+	<div ng-click="ctlr.refresh()" style="position: absolute; right: 0;" class="btn btn-primary">Refresh</div>
+</div>
