@@ -10,8 +10,17 @@
     </ul>
 </div>
 
+<!--<div>
+	<div style="padding:2px;">
+		<button ng-click="togg(); findAndReplace(rowCollection, ' Cam Newton ', 'picked')" style="padding-left:8px; padding-right:8px;" class="btn btn-md btn-success" onclick="findAndReplace(rowCollection, 'QB', 'picked')">Pick</button>
+		<button ng-click="r_taken=true; r_picked=false; r_watch=false; r_normal=false;" style="padding-left:4px; padding-right:4px;" class="btn btn-md btn-danger">Taken</button>
+		<button ng-click="r_watch=true; r_picked=false; r_taken=false; r_normal=false;" style="padding-left:3px; padding-right:3px;" class="btn btn-md btn-warning">Watch</button>
+		<button ng-click="r_normal=true; r_picked=false; r_taken=false; r_watch=false;" style="padding-left:5px; padding-right:5px;" class="btn btn-md btn-default">Reset</button>
+	</div>
+</div>-->
+
 <div class="mobile-table">
-    <table st-table="rowCollection" cellpadding="0" cellspacing="0" border="0" id="data" class="table table-bordered table-condensed table-striped table-hover tablesorter">
+    <table st-table="rowCollection" cellpadding="0" cellspacing="0" border="0" id="data" class="table table-bordered table-condensed table-hover tablesorter">
         <thead>
             <tr>
             	<td colspan="3" data-column="0">&nbsp;</td>
@@ -32,7 +41,7 @@
           				</a>
           			</div>
             	</th>
-            	<th style="width:70px;" data-column="2" class="tablesorter-header">
+            	<th style="width:50px;" data-column="2" class="tablesorter-header">
             		<div class="tablesorter-header-inner"><small></small></div>
             	</th>
             	<th style="width:50px;" data-column="3" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
@@ -138,18 +147,14 @@
 			</tr>          
 		</thead>
         <tbody class="">
-          	<tr class="" ng-repeat="row in rowCollection | orderBy:sortType:sortReverse | filter:posFilter">
+          	<tr ng-class = "{r_picked:row.status == 1,r_taken:row.status == 2,r_watch:row.status == 3, r_normal:row.status == 0}" ng-repeat="row in rowCollection | orderBy:sortType:sortReverse | filter:posFilter" ng-click="togg(row);">
           		<td>{{$index + 1}}</td>
           		<td>
           			<a>{{row.name}}</a><small style="color:#888888;"> {{row.pos}}, {{row.team}}</small>
           		</td>
           		<td>
-          			<button class="btn btn-xs btn-success" onclick="pick(this)">Pick</button>
-          			<button class="btn btn-xs btn-danger" onclick="taken(this)">Taken</button>
-          			<button class="btn btn-xs btn-default" onclick="reset(this)">Reset</button>
+          			
           		</td>
-				<!--<td>{{row.pos}}</td>
-				<td>{{row.team}}</td>-->
 				<td>{{row.att}}</td>
 				<td>{{row.comp}}</td>
 				<td>{{row.p_yds}}</td>
@@ -172,19 +177,45 @@
 </div>
 
 <script>
-    function pick(o){
-    	if (o.parentNode.parentNode.style.backgroundColor=="#58D68D")
-    		o.parentNode.parentNode.style.backgroundColor='initial';
+	
+    /*function pick(r){
+    	if (r.status == 0)
+    	{
+
+    	}
+    	else if (r.status == 1)
+    	{
+
+    	}
+    	else if (r.status == 2)
+    	{
+
+    	}
     	else
-        	o.parentNode.parentNode.style.backgroundColor="#58D68D";
-    }
+    	{
+
+    	}
+
+    	if (o.parentNode.parentNode.parentNode.style.backgroundColor="#58D68D")
+    		o.parentNode.parentNode.parentNode.style.backgroundColor='initial';
+    	else
+        	o.parentNode.parentNode.parentNode.style.backgroundColor="#58D68D";
+
+    }*/
     function taken(o){
-    	if (o.parentNode.parentNode.style.backgroundColor=="#EC7063")
-    		o.parentNode.parentNode.style.backgroundColor='initial';
+    	if (o.parentNode.parentNode.parentNode.style.backgroundColor=="#EC7063")
+    		o.parentNode.parentNode.parentNode.style.backgroundColor='initial';
     	else
-        	o.parentNode.parentNode.style.backgroundColor="#EC7063";
+        	o.parentNode.parentNode.parentNode.style.backgroundColor="#EC7063";
     }
     function reset(o){
-    	o.parentNode.parentNode.style.backgroundColor='initial';
+    	o.parentNode.parentNode.parentNode.style.backgroundColor='initial';
     }
+	function watch(o){
+    	if (o.parentNode.parentNode.parentNode.style.backgroundColor=="#F7DC6F")
+    		o.parentNode.parentNode.parentNode.style.backgroundColor='initial';
+    	else
+        	o.parentNode.parentNode.parentNode.style.backgroundColor="#F7DC6F";
+    }
+    
 </script>
