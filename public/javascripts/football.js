@@ -259,33 +259,6 @@ app.controller('ctlr', function($scope) {
 
 ];
 
-	/*$scope.st_marys = function (ptd, rutd, retd) {
-		var sm = (ptd * 3) + (rutd + retd) * 6;
-		return Math.round(sm * 10)/10;
-	};*/
-
-	$scope.receivers = function(tm) {
-		var team = tm.trim();
-		if (team == "ARI" || team == "JAC" || team == "WAS" || team == "NE" || team == "GB")
-			return "Good";
-		else if (team == "CLE" || team == "LA" || team == "SF" || team == "DET")
-			return "Bad";
-	};
-
-
-	$scope.findAndReplace = function(object, val, replacevalue){
-		var value = val.trim();
-	  for(var x in object){
-	    if(typeof object[x] == typeof {}){
-	      findAndReplace(object[x], value, replacevalue);
-	    }
-	    if(object[x] == value){ 
-	      object["status"] = replacevalue;
-	      // break; // uncomment to stop after first replacement
-	    }
-	  }
-	};
-
 	
 	$scope.sortType     = 'fpts'; // set the default sort type
  	$scope.sortReverse  = true;  // set the default sort order
@@ -294,6 +267,15 @@ app.controller('ctlr', function($scope) {
  	$scope.r_taken = false;
  	$scope.r_watch = false;
  	$scope.r_normal = true;
+ 	$scope.isqb = false;
+ 	$scope.isrb = false;
+ 	$scope.iswr = false;
+ 	$scope.iste = false;
+ 	$scope.isk = false;
+ 	$scope.isgood = false;
+ 	$scope.isbad = false;
+ 	$scope.isnot = false;
+ 	$scope.cell_val = '';
 
 
 	$scope.togg = function(r) {
@@ -303,6 +285,133 @@ app.controller('ctlr', function($scope) {
 			else
 				r.status = 0;
 	};
+
+	/*$scope.color_cell = function() {
+		var x = document.getElementsByClassName("green_letters");
+		var i = 0;
+		for(; i < x.length; i++)
+		{
+			if ($scope.isgood)
+			{
+				x[i].style.backgroundColor = "green";
+			}
+			else if ($scope.isbad)
+			{
+				x[i].style.backgroundColor = "red";
+			}
+		}
+	};*/
+
+
+	$scope.qbs = function(tm) {
+		var team = tm.trim();
+		if (team == "NE" || team == "PIT" || team == "NYG" || team == "IND" || team == "GB" || team == "NO" || team == "ARI" || team == "SEA")
+		{
+			$scope.isgood = true;
+			$scope.isbad = false;
+			$scope.isnot = false;
+			return "Good";
+		}
+		else if (team == "TEN" || team == "CLE" || team == "DEN" || team == "SF" || team == "PHI" || team == "MIN" || team == "BUF" || team == "LA")
+		{
+			$scope.isbad = true;
+			$scope.isgood = false;
+			$scope.isnot = false;
+			return "Bad";
+		}
+		else {
+			$scope.isbad = false;
+			$scope.isgood = false;
+			$scope.isnot = true;
+		}
+	};
+
+	$scope.receivers = function(tm) {
+		var team = tm.trim();
+		if (team == "ARI" || team == "JAC" || team == "WAS" || team == "NE" || team == "GB") {
+			$scope.isgood = true;
+			$scope.isbad = false;
+			$scope.isnot = false;
+			return "Good";
+		}
+		else if (team == "CLE" || team == "LA" || team == "SF" || team == "DET") {
+			$scope.isbad = true;
+			$scope.isgood = false;
+			$scope.isnot = false;
+			return "Bad";
+		}
+		else {
+			$scope.isbad = false;
+			$scope.isgood = false;
+			$scope.isnot = true;
+		}
+	};
+
+	$scope.teams = function(tm) {
+		var team = tm.trim();
+		if (team == "NE" || team == "PIT" || team == "OAK" || team == "DAL" || team == "GB" || team == "CAR" || team == "ARI" || team == "SEA") {
+			$scope.isgood = true;
+			$scope.isbad = false;
+			$scope.isnot = false;
+			return "Good";
+		}
+		else if (team == "TEN" || team == "CLE" || team == "SD" || team == "SF" || team == "PHI" || team == "DET" || team == "ATL" || team == "LA") {
+			$scope.isbad = true;
+			$scope.isgood = false;
+			$scope.isnot = false;
+			return "Bad";
+		}
+		else {
+			$scope.isbad = false;
+			$scope.isgood = false;
+			$scope.isnot = true;
+		}
+	};
+
+	$scope.ols = function(tm) {
+		var team = tm.trim();
+		if (team == "MIN" || team == "DAL" || team == "PIT" || team == "GB" || team == "CIN" || team == "OAK" || team == "PHI" || team == "MIA") {
+			$scope.isgood = true;
+			$scope.isbad = false;
+			$scope.isnot = false;
+			return "Good";
+		}
+		else if (team == "SEA" || team == "KC" || team == "SF" || team == "JAC" || team == "NYG" || team == "DET") {
+			$scope.isbad = true;
+			$scope.isgood = false;
+			$scope.isnot = false;
+			return "Bad";
+		}
+		else {
+			$scope.isbad = false;
+			$scope.isgood = false;
+			$scope.isnot = true;
+		}
+	};
+
+	$scope.defenses = function(tm) {
+		var team = tm.trim();
+		if (team == "MIN" || team == "DEN" || team == "ARI" || team == "HOU" || team == "CIN" || team == "CAR" || team == "LA" || team == "SEA")
+		{
+			$scope.isgood = true;
+			$scope.isbad = false;
+			console.log("is good = " + $scope.isgood);
+			return "Good";
+		}
+		else if (team == "NO" || team == "CLE" || team == "SF" || team == "WAS" || team == "IND" || team == "PHI" || team == "BUF" || team == "NYG")
+		{
+			$scope.isgood = false;
+			$scope.isbad = true;
+			console.log("is bad = " + $scope.isbad);
+			return "Bad";
+		}
+		else {
+			$scope.isbad = false;
+			$scope.isgood = false;
+			$scope.isnot = true;
+		}
+	};
+
 
 });
 
@@ -339,10 +448,43 @@ app.directive("football", [function (){
                 ctlr.getData(category);
             }*/
 
+            $(document).ready(function(){
+			    $("#data td.defense_cell:contains('Good')").css('background-color','#fcc');
+			});
+
         }],
         controllerAs: "ctlr"
     };
 }]);
+
+/*app.filter("colorCell", function(){
+   return function(input){
+      // Your logic
+      	var output;
+
+      	//var table = document.getElementById('data');
+		//var tbody = table.getElementsByTagName('tbody')[0];
+		//var cell = tbody.getElementByTagName(this);
+		var cell = document.getElementById('d_cell');
+
+		//for (var i=0, len=cells.length; i<len; i++){
+		    if (input > 5){
+		        cell.style.color = 'red';
+		    }
+		    else if (input < -5){
+		        cell.style.color = 'green';
+		    }
+		//}
+      return output; 
+   }
+});*/
+
+window.onload=function(){
+	    var myTd = document.getElementsByClassName("defense_cell");
+	    if(myTd[4]!=null) {
+	    	myTd[4].style.color = 'red';
+	    }
+    };
 
 $(function() {
 	var url = window.location;
@@ -357,12 +499,5 @@ $(function() {
 
 
 
-/*$(document).ready(function() {
- 
-    
-        $('#ng_row').each(function() {
-            if ($(row.status) == 'picked')
-            $(this).parent().css('backgroundColor', '#58D68D');
-        });
- 
-});*/
+
+

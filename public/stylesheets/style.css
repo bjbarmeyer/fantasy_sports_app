@@ -50,3 +50,15 @@ h2 {
 .r_watch {
 	background-color: #F7DC6F;
 }
+
+.defense_cell {
+	background-color: #555555;
+}
+
+.green_cell {
+	background-color: #00FF00;
+}
+
+.red_cell {
+	background-color: #FF0000;
+}
