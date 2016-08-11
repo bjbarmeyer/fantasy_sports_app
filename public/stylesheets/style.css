@@ -62,3 +62,7 @@ h2 {
 .red_cell {
 	background-color: #FF0000;
 }
+
+.invisible {
+	visibility: hidden;
+}

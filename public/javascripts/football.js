@@ -272,10 +272,12 @@ app.controller('ctlr', function($scope) {
  	$scope.iswr = false;
  	$scope.iste = false;
  	$scope.isk = false;
+ 	$scope.pos_val = 0;
  	$scope.isgood = false;
  	$scope.isbad = false;
  	$scope.isnot = false;
  	$scope.cell_val = '';
+ 	$scope.selectedTabs = [];
 
 
 	$scope.togg = function(r) {
@@ -286,22 +288,50 @@ app.controller('ctlr', function($scope) {
 				r.status = 0;
 	};
 
-	/*$scope.color_cell = function() {
-		var x = document.getElementsByClassName("green_letters");
-		var i = 0;
-		for(; i < x.length; i++)
-		{
-			if ($scope.isgood)
-			{
-				x[i].style.backgroundColor = "green";
-			}
-			else if ($scope.isbad)
-			{
-				x[i].style.backgroundColor = "red";
-			}
+	$scope.findPos = function(p) {
+		var pos = p.trim();
+		if (pos == 'QB') {
+			$scope.pos_val = 0;
+			$scope.isqb = true;
+			$scope.isrb = false;
+			$scope.iswr = false;
+			$scope.iste = false;
+			$scope.isk = false;
 		}
-	};*/
-
+		else if (pos == 'RB') {
+			$scope.pos_val = 1;
+			$scope.isqb = false;
+			$scope.isrb = true;
+			$scope.iswr = false;
+			$scope.iste = false;
+			$scope.isk = false;
+		} 
+		else if (pos == 'WR') {
+			$scope.pos_val = 2;
+			$scope.isqb = false;
+			$scope.isrb = false;
+			$scope.iswr = true;
+			$scope.iste = false;
+			$scope.isk = false;
+		} 
+		else if (pos == 'TE') {
+			$scope.pos_val = 3;
+			$scope.isqb = false;
+			$scope.isrb = false;
+			$scope.iswr = false;
+			$scope.iste = true;
+			$scope.isk = false;
+		} 
+		else if (pos == 'K') {
+			$scope.pos_val = 4;
+			$scope.isqb = false;
+			$scope.isrb = false;
+			$scope.iswr = false;
+			$scope.iste = false;
+			$scope.isk = true;
+		} 
+		return pos;
+	}
 
 	$scope.qbs = function(tm) {
 		var team = tm.trim();
@@ -403,6 +433,27 @@ app.controller('ctlr', function($scope) {
 			$scope.isgood = false;
 			$scope.isbad = true;
 			console.log("is bad = " + $scope.isbad);
+			return "Bad";
+		}
+		else {
+			$scope.isbad = false;
+			$scope.isgood = false;
+			$scope.isnot = true;
+		}
+	};
+
+	$scope.rbs = function(tm) {
+		var team = tm.trim();
+		if (team == "MIN" || team == "LA" || team == "ARI" || team == "KC" || team == "PIT" || team == "DAL" || team == "ATL" || team == "HOU")
+		{
+			$scope.isgood = true;
+			$scope.isbad = false;
+			return "Good";
+		}
+		else if (team == "NYG" || team == "CLE" || team == "IND" || team == "DET" || team == "BAL" || team == "CHI" || team == "WAS" || team == "SD")
+		{
+			$scope.isgood = false;
+			$scope.isbad = true;
 			return "Bad";
 		}
 		else {
