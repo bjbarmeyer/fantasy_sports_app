@@ -2,260 +2,260 @@ var app = angular.module('Football', []);
 
 app.controller('ctlr', function($scope) {
 	$scope.rowCollection = [
-{ name: 'Cam Newton ', 	pos: 'QB', 	team: 'CAR', 	att: 499.6, 	comp: 299.1, 	p_yds: 3722.7, 	p_td: 27.1, 	int: 12, 	rush: 121.4, 	ru_yds: 625.9, 	ru_td: 7, 	fl: 3.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 330.8, 	st_marys: 123.3, status: 0 },
-{ name: 'Aaron Rodgers', 	pos: 'QB', 	team: ' GB', 	att: 563.2, 	comp: 357.5, 	p_yds: 4229.4, 	p_td: 34.9, 	int: 7.7, 	rush: 54.3, 	ru_yds: 273.3, 	ru_td: 2, 	fl: 3.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 326.1, 	st_marys: 116.7, status: 0 },
-{ name: 'Russell Wilson ', 	pos: 'QB', 	team: 'SEA', 	att: 478.8, 	comp: 309, 	p_yds: 3785.9, 	p_td: 28.9, 	int: 10.9, 	rush: 106.5, 	ru_yds: 578.7, 	ru_td: 3.2, 	fl: 3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 316.1, 	st_marys: 105.9, status: 0 },
-{ name: 'Andrew Luck ', 	pos: 'QB', 	team: 'IND', 	att: 621, 	comp: 366.4, 	p_yds: 4272.7, 	p_td: 32.7, 	int: 17.3, 	rush: 60.9, 	ru_yds: 286.4, 	ru_td: 2.2, 	fl: 3.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 301.6, 	st_marys: 111.3, status: 0 },
-{ name: 'Drew Brees', 	pos: 'QB', 	team: ' NO', 	att: 642, 	comp: 432.1, 	p_yds: 4815.7, 	p_td: 31.6, 	int: 14.6, 	rush: 25.1, 	ru_yds: 40.9, 	ru_td: 1, 	fl: 3.1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 293.8, 	st_marys: 100.8, status: 0 },
-{ name: 'Ben Roethlisberger ', 	pos: 'QB', 	team: 'PIT', 	att: 584.2, 	comp: 383.1, 	p_yds: 4631, 	p_td: 29.6, 	int: 14.2, 	rush: 27.1, 	ru_yds: 63.2, 	ru_td: 0.8, 	fl: 2.4, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 281.9, 	st_marys: 93.6, status: 0 },
-{ name: 'Carson Palmer ', 	pos: 'QB', 	team: 'ARI', 	att: 567.1, 	comp: 356.2, 	p_yds: 4437.9, 	p_td: 30.5, 	int: 13.9, 	rush: 26.4, 	ru_yds: 56.2, 	ru_td: 0.7, 	fl: 3.3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 275.1, 	st_marys: 95.7, status: 0 },
-{ name: 'Blake Bortles ', 	pos: 'QB', 	team: 'JAC', 	att: 565, 	comp: 331.7, 	p_yds: 3958.6, 	p_td: 28.5, 	int: 17.6, 	rush: 55.3, 	ru_yds: 312.4, 	ru_td: 1.9, 	fl: 4.3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 271, 	st_marys: 96.9, status: 0 },
-{ name: 'Tyrod Taylor ', 	pos: 'QB', 	team: 'BUF', 	att: 462.4, 	comp: 284.7, 	p_yds: 3398.7, 	p_td: 21, 	int: 11, 	rush: 103, 	ru_yds: 537.2, 	ru_td: 3.4, 	fl: 2.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 267.2, 	st_marys: 83.4, status: 0 },
-{ name: 'Eli Manning ', 	pos: 'QB', 	team: 'NYG', 	att: 602.6, 	comp: 376.8, 	p_yds: 4349, 	p_td: 29.7, 	int: 14.6, 	rush: 20.5, 	ru_yds: 62.7, 	ru_td: 0.5, 	fl: 3.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 265.7, 	st_marys: 92.1, status: 0 },
-{ name: 'Philip Rivers', 	pos: 'QB', 	team: ' SD', 	att: 621.4, 	comp: 405.9, 	p_yds: 4531.3, 	p_td: 28.9, 	int: 15.6, 	rush: 24.4, 	ru_yds: 50.4, 	ru_td: 0.2, 	fl: 3.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 265.5, 	st_marys: 87.9, status: 0 },
-{ name: 'Andy Dalton ', 	pos: 'QB', 	team: 'CIN', 	att: 511.1, 	comp: 325.4, 	p_yds: 3868.9, 	p_td: 25.7, 	int: 12.6, 	rush: 66.1, 	ru_yds: 189.2, 	ru_td: 2.6, 	fl: 3.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 259.8, 	st_marys: 92.7, status: 0 },
-{ name: 'Matthew Stafford ', 	pos: 'QB', 	team: 'DET', 	att: 582.2, 	comp: 373.1, 	p_yds: 4196.1, 	p_td: 25.9, 	int: 14.1, 	rush: 36.3, 	ru_yds: 126.5, 	ru_td: 1.4, 	fl: 3.3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 257.8, 	st_marys: 86.1, status: 0 },
-{ name: 'Kirk Cousins ', 	pos: 'QB', 	team: 'WAS', 	att: 552.4, 	comp: 359.3, 	p_yds: 4177.8, 	p_td: 26.2, 	int: 15, 	rush: 30.3, 	ru_yds: 75.9, 	ru_td: 2.6, 	fl: 3.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 257.7, 	st_marys: 94.2, status: 0 },
-{ name: 'Jameis Winston', 	pos: 'QB', 	team: ' TB', 	att: 536.5, 	comp: 321.3, 	p_yds: 3946, 	p_td: 23.7, 	int: 15.4, 	rush: 52.3, 	ru_yds: 210.1, 	ru_td: 3.7, 	fl: 3.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 257.6, 	st_marys: 93.3, status: 0 },
-{ name: 'Derek Carr ', 	pos: 'QB', 	team: 'OAK', 	att: 589.7, 	comp: 357.7, 	p_yds: 3948.8, 	p_td: 28.4, 	int: 13.9, 	rush: 30.9, 	ru_yds: 116.4, 	ru_td: 0.7, 	fl: 3.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 252.2, 	st_marys: 89.4, status: 0 },
-{ name: 'Tony Romo ', 	pos: 'QB', 	team: 'DAL', 	att: 518.4, 	comp: 342.5, 	p_yds: 3914, 	p_td: 29.1, 	int: 12.9, 	rush: 24.9, 	ru_yds: 69.7, 	ru_td: 0.6, 	fl: 3.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 250.7, 	st_marys: 90.9, status: 0 },
-{ name: 'Ryan Tannehill ', 	pos: 'QB', 	team: 'MIA', 	att: 582.2, 	comp: 362.4, 	p_yds: 4093.5, 	p_td: 24.2, 	int: 13.7, 	rush: 41.6, 	ru_yds: 181.4, 	ru_td: 1, 	fl: 3.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 250.6, 	st_marys: 78.6, status: 0 },
-{ name: 'Matt Ryan ', 	pos: 'QB', 	team: 'ATL', 	att: 607.9, 	comp: 401.9, 	p_yds: 4477.1, 	p_td: 25, 	int: 15.6, 	rush: 33.6, 	ru_yds: 75.9, 	ru_td: 0.3, 	fl: 3.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 249.8, 	st_marys: 76.8, status: 0 },
-{ name: 'Alex Smith', 	pos: 'QB', 	team: ' KC', 	att: 479.6, 	comp: 306.4, 	p_yds: 3411.4, 	p_td: 21.4, 	int: 9.4, 	rush: 72.4, 	ru_yds: 398.1, 	ru_td: 1.8, 	fl: 2.8, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 248.5, 	st_marys: 75., status: 0 },
-{ name: 'Ryan Fitzpatrick ', 	pos: 'QB', 	team: 'NYJ', 	att: 542.2, 	comp: 321, 	p_yds: 3677.1, 	p_td: 24.3, 	int: 15.3, 	rush: 60.3, 	ru_yds: 263.5, 	ru_td: 2.1, 	fl: 2.4, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 247.8, 	st_marys: 85.5, status: 0 },
-{ name: 'Marcus Mariota ', 	pos: 'QB', 	team: 'TEN', 	att: 496.1, 	comp: 307.1, 	p_yds: 3567.3, 	p_td: 20.8, 	int: 14.7, 	rush: 58.9, 	ru_yds: 387.7, 	ru_td: 3, 	fl: 4.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 243.9, 	st_marys: 80.4, status: 0 },
-{ name: 'Joe Flacco ', 	pos: 'QB', 	team: 'BAL', 	att: 591.4, 	comp: 361.6, 	p_yds: 4044.5, 	p_td: 24.4, 	int: 15.2, 	rush: 29.6, 	ru_yds: 61.1, 	ru_td: 1.7, 	fl: 3.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 237.9, 	st_marys: 83.4, status: 0 },
-{ name: 'Tom Brady', 	pos: 'QB', 	team: ' NE', 	att: 472.7, 	comp: 301.3, 	p_yds: 3449.5, 	p_td: 25.9, 	int: 7, 	rush: 26.3, 	ru_yds: 48.8, 	ru_td: 1.4, 	fl: 2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 236.6, 	st_marys: 86.1, status: 0 },
-{ name: 'Jay Cutler ', 	pos: 'QB', 	team: 'CHI', 	att: 526.1, 	comp: 333.8, 	p_yds: 3807.7, 	p_td: 23.7, 	int: 15.9, 	rush: 39.6, 	ru_yds: 179, 	ru_td: 1.2, 	fl: 3.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 233.4, 	st_marys: 78.3, status: 0 },
-{ name: 'Brock Osweiler ', 	pos: 'QB', 	team: 'HOU', 	att: 539.5, 	comp: 326.9, 	p_yds: 3807.7, 	p_td: 23.6, 	int: 14.2, 	rush: 45.1, 	ru_yds: 124.4, 	ru_td: 1.1, 	fl: 3.8, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 229.6, 	st_marys: 77.4, status: 0 },
-{ name: 'Teddy Bridgewater ', 	pos: 'QB', 	team: 'MIN', 	att: 468.1, 	comp: 297.1, 	p_yds: 3321.9, 	p_td: 19, 	int: 11.9, 	rush: 53.2, 	ru_yds: 256.3, 	ru_td: 2.4, 	fl: 3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 219.2, 	st_marys: 71.4, status: 0 },
-{ name: 'Robert Griffin ', 	pos: 'QB', 	team: 'CLE', 	att: 452.7, 	comp: 279.2, 	p_yds: 3251.3, 	p_td: 16, 	int: 13.5, 	rush: 95.3, 	ru_yds: 267.9, 	ru_td: 1.6, 	fl: 3.8, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 196, 	st_marys: 57.6, status: 0 },
-{ name: 'Jared Goff', 	pos: 'QB', 	team: ' LA', 	att: 482.3, 	comp: 291, 	p_yds: 3308, 	p_td: 17.7, 	int: 15, 	rush: 38.5, 	ru_yds: 137, 	ru_td: 1, 	fl: 3.3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 186.1, 	st_marys: 59.1, status: 0 },
-{ name: 'Sam Bradford ', 	pos: 'QB', 	team: 'PHI', 	att: 435.3, 	comp: 271.5, 	p_yds: 2978.8, 	p_td: 17, 	int: 11.1, 	rush: 21.3, 	ru_yds: 50.9, 	ru_td: 0.4, 	fl: 3.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 166.1, 	st_marys: 53.4, status: 0 },
-{ name: 'Blaine Gabbert', 	pos: 'QB', 	team: ' SF', 	att: 346.8, 	comp: 208.9, 	p_yds: 2355.9, 	p_td: 11.8, 	int: 9.8, 	rush: 41.4, 	ru_yds: 209.9, 	ru_td: 1.2, 	fl: 2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 145.8, 	st_marys: 42.6, status: 0 },
-{ name: 'Mark Sanchez ', 	pos: 'QB', 	team: 'DEN', 	att: 372.9, 	comp: 226.3, 	p_yds: 2558, 	p_td: 15, 	int: 12.9, 	rush: 28.1, 	ru_yds: 85, 	ru_td: 0.6, 	fl: 3.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 141.9, 	st_marys: 48.6, status: 0 },
-{ name: 'Colin Kaepernick', 	pos: 'QB', 	team: ' SF', 	att: 186.2, 	comp: 105.8, 	p_yds: 1192.6, 	p_td: 6.1, 	int: 5.2, 	rush: 32.3, 	ru_yds: 167.3, 	ru_td: 0.8, 	fl: 2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 79.5, 	st_marys: 23.1, status: 0 },
-{ name: 'Paxton Lynch ', 	pos: 'QB', 	team: 'DEN', 	att: 155.7, 	comp: 89.4, 	p_yds: 1033.2, 	p_td: 5.9, 	int: 4.8, 	rush: 16, 	ru_yds: 59.7, 	ru_td: 0.3, 	fl: 0.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 62, 	st_marys: 19.5, status: 0 },
-{ name: 'Jimmy Garoppolo', 	pos: 'QB', 	team: ' NE', 	att: 149.4, 	comp: 88.5, 	p_yds: 981.6, 	p_td: 6.2, 	int: 3.6, 	rush: 8.3, 	ru_yds: 16.2, 	ru_td: 0.1, 	fl: 0.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 57.8, 	st_marys: 19.2, status: 0 },
-{ name: 'Carson Wentz ', 	pos: 'QB', 	team: 'PHI', 	att: 109.9, 	comp: 64.9, 	p_yds: 729.9, 	p_td: 4, 	int: 3.6, 	rush: 11, 	ru_yds: 44.4, 	ru_td: 0.5, 	fl: 0.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 43.9, 	st_marys: 15, status: 0 },
-{ name: 'Josh McCown ', 	pos: 'QB', 	team: 'CLE', 	att: 104.6, 	comp: 64.3, 	p_yds: 726.9, 	p_td: 4.2, 	int: 3, 	rush: 8.2, 	ru_yds: 36.7, 	ru_td: 0.1, 	fl: 0.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 43.4, 	st_marys: 13.2, status: 0 },
-																
-																
-{ name: 'Adrian Peterson ', 	pos: 'RB', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 296.7, 	ru_yds: 1344.4, 	ru_td: 9.2, 	fl: 33.3, 	rec: 238, 	re_yds: 1, 	re_td: 3.1, 	fpts: 213.1, 	st_marys: 61.2, status: 0 },
-{ name: 'Todd Gurley', 	pos: 'RB', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 282.6, 	ru_yds: 1255.9, 	ru_td: 9.2, 	fl: 35.1, 	rec: 295.4, 	re_yds: 0.9, 	re_td: 1.8, 	fpts: 211.6, 	st_marys: 60.6, status: 0 },
-{ name: 'Jamaal Charles', 	pos: 'RB', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 223.6, 	ru_yds: 1093.9, 	ru_td: 8.6, 	fl: 48.7, 	rec: 377, 	re_yds: 3.2, 	re_td: 3.7, 	fpts: 210.5, 	st_marys: 70.8, status: 0 },
-{ name: 'David Johnson ', 	pos: 'RB', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 220.2, 	ru_yds: 946.7, 	ru_td: 8.2, 	fl: 55.8, 	rec: 508.1, 	re_yds: 2.9, 	re_td: 1.5, 	fpts: 209.2, 	st_marys: 66.6, status: 0 },
-{ name: 'Lamar Miller ', 	pos: 'RB', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 260.6, 	ru_yds: 1159.8, 	ru_td: 7.2, 	fl: 46.6, 	rec: 362.8, 	re_yds: 1.6, 	re_td: 1.9, 	fpts: 201, 	st_marys: 52.8, status: 0 },
-{ name: 'Le\'Veon Bell ', 	pos: 'RB', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 209.1, 	ru_yds: 949.5, 	ru_td: 7.6, 	fl: 52.1, 	rec: 417.6, 	re_yds: 2, 	re_td: 1.1, 	fpts: 191.7, 	st_marys: 57.6, status: 0 },
-{ name: 'Devonta Freeman ', 	pos: 'RB', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 216.6, 	ru_yds: 880.8, 	ru_td: 7.2, 	fl: 63.2, 	rec: 498.5, 	re_yds: 2.1, 	re_td: 2, 	fpts: 189.3, 	st_marys: 55.8, status: 0 },
-{ name: 'Ezekiel Elliott ', 	pos: 'RB', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 240.1, 	ru_yds: 1069.9, 	ru_td: 7.7, 	fl: 38.1, 	rec: 305.3, 	re_yds: 1.4, 	re_td: 1.6, 	fpts: 188.5, 	st_marys: 54.6, status: 0 },
-{ name: 'Eddie Lacy', 	pos: 'RB', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 228.2, 	ru_yds: 1016.3, 	ru_td: 7.1, 	fl: 34.2, 	rec: 292, 	re_yds: 1.8, 	re_td: 2.2, 	fpts: 180, 	st_marys: 53.4, status: 0 },
-{ name: 'LeSean McCoy ', 	pos: 'RB', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 251.3, 	ru_yds: 1081.6, 	ru_td: 6.3, 	fl: 40.8, 	rec: 303.2, 	re_yds: 1.3, 	re_td: 2.3, 	fpts: 179.8, 	st_marys: 45.6, status: 0 },
-{ name: 'Mark Ingram', 	pos: 'RB', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 215.6, 	ru_yds: 934, 	ru_td: 7.6, 	fl: 52.4, 	rec: 364.2, 	re_yds: 1.2, 	re_td: 1.7, 	fpts: 179.3, 	st_marys: 52.8, status: 0 },
-{ name: 'Doug Martin', 	pos: 'RB', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 257.9, 	ru_yds: 1135.3, 	ru_td: 6.2, 	fl: 32.6, 	rec: 237.7, 	re_yds: 0.9, 	re_td: 3.2, 	fpts: 173.3, 	st_marys: 42.6, status: 0 },
-{ name: 'Thomas Rawls ', 	pos: 'RB', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 225.9, 	ru_yds: 1087.6, 	ru_td: 6.6, 	fl: 22.7, 	rec: 178.8, 	re_yds: 0.9, 	re_td: 1.9, 	fpts: 168, 	st_marys: 45., status: 0 },
-{ name: 'C.J. Anderson ', 	pos: 'RB', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 220, 	ru_yds: 992.5, 	ru_td: 6.2, 	fl: 35.5, 	rec: 269, 	re_yds: 1, 	re_td: 1.9, 	fpts: 165.4, 	st_marys: 43.2, status: 0 },
-{ name: 'Matt Forte ', 	pos: 'RB', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 213.6, 	ru_yds: 907.8, 	ru_td: 5.1, 	fl: 45.9, 	rec: 365.2, 	re_yds: 1.7, 	re_td: 1.9, 	fpts: 164.6, 	st_marys: 40.8, status: 0 },
-{ name: 'Carlos Hyde', 	pos: 'RB', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 239.4, 	ru_yds: 1001.3, 	ru_td: 5.6, 	fl: 33.9, 	rec: 209.5, 	re_yds: 0.6, 	re_td: 1.2, 	fpts: 156, 	st_marys: 37.2, status: 0 },
-{ name: 'Latavius Murray ', 	pos: 'RB', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 222.1, 	ru_yds: 927.6, 	ru_td: 6, 	fl: 34.3, 	rec: 229.7, 	re_yds: 0.8, 	re_td: 1.8, 	fpts: 152.7, 	st_marys: 40.8, status: 0 },
-{ name: 'Matt Jones ', 	pos: 'RB', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 224, 	ru_yds: 885.7, 	ru_td: 5.3, 	fl: 33.4, 	rec: 345.4, 	re_yds: 1.3, 	re_td: 5.4, 	fpts: 151.7, 	st_marys: 39.6, status: 0 },
-{ name: 'DeMarco Murray ', 	pos: 'RB', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 209.8, 	ru_yds: 903.2, 	ru_td: 5.9, 	fl: 32.8, 	rec: 249.3, 	re_yds: 1, 	re_td: 2.7, 	fpts: 151.2, 	st_marys: 41.4, status: 0 },
-{ name: 'Jonathan Stewart ', 	pos: 'RB', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 226.7, 	ru_yds: 985.3, 	ru_td: 6, 	fl: 22.2, 	rec: 154, 	re_yds: 0.9, 	re_td: 2, 	fpts: 151.2, 	st_marys: 41.4, status: 0 },
-{ name: 'Jeremy Langford ', 	pos: 'RB', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 185, 	ru_yds: 750.4, 	ru_td: 5, 	fl: 36.5, 	rec: 329.8, 	re_yds: 1.6, 	re_td: 1.2, 	fpts: 145.4, 	st_marys: 39.6, status: 0 },
-{ name: 'Jeremy Hill ', 	pos: 'RB', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 206.7, 	ru_yds: 870.8, 	ru_td: 7.5, 	fl: 19.2, 	rec: 134.9, 	re_yds: 0.8, 	re_td: 2.8, 	fpts: 144.9, 	st_marys: 49.8, status: 0 },
-{ name: 'Ryan Mathews ', 	pos: 'RB', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 186.9, 	ru_yds: 834.3, 	ru_td: 5.8, 	fl: 32.6, 	rec: 239.1, 	re_yds: 1, 	re_td: 2.9, 	fpts: 142.2, 	st_marys: 40.8, status: 0 },
-{ name: 'Frank Gore ', 	pos: 'RB', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 198.4, 	ru_yds: 784, 	ru_td: 5.6, 	fl: 30.2, 	rec: 245.4, 	re_yds: 1, 	re_td: 2.2, 	fpts: 138.1, 	st_marys: 39.6, status: 0 },
-{ name: 'Giovani Bernard ', 	pos: 'RB', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 150.5, 	ru_yds: 661.4, 	ru_td: 3.6, 	fl: 48.3, 	rec: 418.2, 	re_yds: 1.6, 	re_td: 1.2, 	fpts: 136.4, 	st_marys: 31.2, status: 0 },
-{ name: 'Ameer Abdullah ', 	pos: 'RB', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 188, 	ru_yds: 790.4, 	ru_td: 4.8, 	fl: 34.7, 	rec: 259.2, 	re_yds: 1, 	re_td: 1.9, 	fpts: 136, 	st_marys: 34.8, status: 0 },
-{ name: 'Melvin Gordon', 	pos: 'RB', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 226.1, 	ru_yds: 880.5, 	ru_td: 4.4, 	fl: 32.2, 	rec: 205.7, 	re_yds: 0.7, 	re_td: 3.1, 	fpts: 133.1, 	st_marys: 30.6, status: 0 },
-{ name: 'Dion Lewis', 	pos: 'RB', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 99.4, 	ru_yds: 412.6, 	ru_td: 3.1, 	fl: 67.3, 	rec: 590.9, 	re_yds: 2.8, 	re_td: 1.9, 	fpts: 131.7, 	st_marys: 35.4, status: 0 },
-{ name: 'Danny Woodhead', 	pos: 'RB', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 83.6, 	ru_yds: 313.9, 	ru_td: 2.1, 	fl: 72.5, 	rec: 623.6, 	re_yds: 3.8, 	re_td: 1.1, 	fpts: 127, 	st_marys: 35.4, status: 0 },
-{ name: 'Rashad Jennings ', 	pos: 'RB', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 181.1, 	ru_yds: 736, 	ru_td: 4.5, 	fl: 30.2, 	rec: 245.6, 	re_yds: 0.9, 	re_td: 2, 	fpts: 126.7, 	st_marys: 32.4, status: 0 },
-{ name: 'Duke Johnson ', 	pos: 'RB', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 142.4, 	ru_yds: 557.4, 	ru_td: 2.9, 	fl: 57.3, 	rec: 465.5, 	re_yds: 1.7, 	re_td: 1.7, 	fpts: 126.5, 	st_marys: 27.6, status: 0 },
-{ name: 'T.J. Yeldon ', 	pos: 'RB', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 171, 	ru_yds: 701.5, 	ru_td: 3.9, 	fl: 37, 	rec: 275.3, 	re_yds: 1, 	re_td: 1.2, 	fpts: 125, 	st_marys: 29.4, status: 0 },
-{ name: 'Justin Forsett ', 	pos: 'RB', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 165.9, 	ru_yds: 744.6, 	ru_td: 4, 	fl: 30, 	rec: 194.6, 	re_yds: 0.8, 	re_td: 1.1, 	fpts: 120.3, 	st_marys: 28.8, status: 0 },
-{ name: 'Isaiah Crowell ', 	pos: 'RB', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 171.1, 	ru_yds: 698.1, 	ru_td: 4.6, 	fl: 20.6, 	rec: 186, 	re_yds: 0.8, 	re_td: 1.3, 	fpts: 117.8, 	st_marys: 32.4, status: 0 },
-{ name: 'LeGarrette Blount', 	pos: 'RB', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 169.2, 	ru_yds: 699.7, 	ru_td: 6.2, 	fl: 10.1, 	rec: 70.3, 	re_yds: 0.4, 	re_td: 0.8, 	fpts: 114.5, 	st_marys: 39.6, status: 0 },
-{ name: 'Jay Ajayi ', 	pos: 'RB', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 150.8, 	ru_yds: 631.5, 	ru_td: 3.7, 	fl: 26.5, 	rec: 216.7, 	re_yds: 1, 	re_td: 1, 	fpts: 111, 	st_marys: 28.2, status: 0 },
-{ name: 'Chris Ivory ', 	pos: 'RB', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 160.4, 	ru_yds: 667.3, 	ru_td: 4.5, 	fl: 23, 	rec: 164.4, 	re_yds: 0.6, 	re_td: 2, 	fpts: 110.3, 	st_marys: 30.6, status: 0 },
-{ name: 'Arian Foster ', 	pos: 'RB', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 144.3, 	ru_yds: 576, 	ru_td: 3.7, 	fl: 32.2, 	rec: 272.9, 	re_yds: 1.2, 	re_td: 3, 	fpts: 108.9, 	st_marys: 29.4, status: 0 },
-{ name: 'Charles Sims', 	pos: 'RB', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 99.1, 	ru_yds: 428.1, 	ru_td: 2.1, 	fl: 43.2, 	rec: 394.7, 	re_yds: 2.1, 	re_td: 1.7, 	fpts: 104.2, 	st_marys: 25.2, status: 0 },
-{ name: 'DeAngelo Williams ', 	pos: 'RB', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 128.4, 	ru_yds: 571.3, 	ru_td: 4.2, 	fl: 22, 	rec: 180.1, 	re_yds: 0.8, 	re_td: 1.1, 	fpts: 103, 	st_marys: 30., status: 0 },
-{ name: 'Darren Sproles ', 	pos: 'RB', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 77.9, 	ru_yds: 355.6, 	ru_td: 2.7, 	fl: 50.6, 	rec: 400.8, 	re_yds: 1.6, 	re_td: 1.2, 	fpts: 98.9, 	st_marys: 25.8, status: 0 },
-{ name: 'Shane Vereen ', 	pos: 'RB', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 69.7, 	ru_yds: 289.1, 	ru_td: 1.7, 	fl: 52.6, 	rec: 437.3, 	re_yds: 2.4, 	re_td: 1.1, 	fpts: 95, 	st_marys: 24.6, status: 0 },
-{ name: 'Theo Riddick ', 	pos: 'RB', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 56.2, 	ru_yds: 210.4, 	ru_td: 1.1, 	fl: 61.1, 	rec: 523.6, 	re_yds: 2.6, 	re_td: 1, 	fpts: 93.4, 	st_marys: 22.2, status: 0 },
-{ name: 'Derrick Henry ', 	pos: 'RB', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 127.7, 	ru_yds: 534.5, 	ru_td: 3.9, 	fl: 14.7, 	rec: 136.9, 	re_yds: 0.6, 	re_td: 2, 	fpts: 90.2, 	st_marys: 27, status: 0 },
-{ name: 'James Starks', 	pos: 'RB', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 118.3, 	ru_yds: 490.5, 	ru_td: 3, 	fl: 25.2, 	rec: 199.3, 	re_yds: 0.9, 	re_td: 1.9, 	fpts: 88.2, 	st_marys: 23.4, status: 0 },
-{ name: 'Bilal Powell ', 	pos: 'RB', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 96, 	ru_yds: 391.7, 	ru_td: 1.9, 	fl: 35.8, 	rec: 284.8, 	re_yds: 1.1, 	re_td: 1, 	fpts: 83.7, 	st_marys: 18, status: 0 },
-{ name: 'Ronnie Hillman ', 	pos: 'RB', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 122.3, 	ru_yds: 490.7, 	ru_td: 3.4, 	fl: 17.9, 	rec: 113.2, 	re_yds: 0.2, 	re_td: 1, 	fpts: 80.2, 	st_marys: 21.6, status: 0 },
-{ name: 'Jordan Howard ', 	pos: 'RB', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 107.4, 	ru_yds: 437, 	ru_td: 3, 	fl: 20, 	rec: 160.1, 	re_yds: 0.7, 	re_td: 1.2, 	fpts: 79.3, 	st_marys: 22.2, status: 0 },
-{ name: 'Javorius Allen ', 	pos: 'RB', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 111.2, 	ru_yds: 441.3, 	ru_td: 2.7, 	fl: 23, 	rec: 180.6, 	re_yds: 0.7, 	re_td: 1.9, 	fpts: 79.1, 	st_marys: 20.4, status: 0 },
-{ name: 'Darren McFadden ', 	pos: 'RB', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 99.6, 	ru_yds: 424.1, 	ru_td: 2.7, 	fl: 25.1, 	rec: 189.4, 	re_yds: 0.7, 	re_td: 2.1, 	fpts: 77.7, 	st_marys: 20.4, status: 0 },
-{ name: 'Karlos Williams ', 	pos: 'RB', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 94.6, 	ru_yds: 414.1, 	ru_td: 3.4, 	fl: 16.9, 	rec: 126, 	re_yds: 1, 	re_td: 1.1, 	fpts: 77.7, 	st_marys: 26.4, status: 0 },
-{ name: 'C.J. Prosise ', 	pos: 'RB', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 72.8, 	ru_yds: 326, 	ru_td: 1.9, 	fl: 37.6, 	rec: 296.3, 	re_yds: 1, 	re_td: 1.2, 	fpts: 77.1, 	st_marys: 17.4, status: 0 },
-{ name: 'Tevin Coleman ', 	pos: 'RB', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 100.9, 	ru_yds: 419, 	ru_td: 2.7, 	fl: 20.2, 	rec: 138.7, 	re_yds: 0.7, 	re_td: 2.2, 	fpts: 71.3, 	st_marys: 20.4, status: 0 },
-{ name: 'Chris Johnson ', 	pos: 'RB', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 108.3, 	ru_yds: 438.8, 	ru_td: 3, 	fl: 12.5, 	rec: 92.3, 	re_yds: 0.3, 	re_td: 1.8, 	fpts: 69.3, 	st_marys: 19.8, status: 0 },
-{ name: 'Josh Ferguson ', 	pos: 'RB', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 93.1, 	ru_yds: 378, 	ru_td: 1.9, 	fl: 22.1, 	rec: 174.7, 	re_yds: 0.9, 	re_td: 1.9, 	fpts: 68.3, 	st_marys: 16.8, status: 0 },
-{ name: 'Kenneth Dixon ', 	pos: 'RB', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 84.5, 	ru_yds: 353, 	ru_td: 1.9, 	fl: 21.1, 	rec: 163.9, 	re_yds: 0.6, 	re_td: 1.2, 	fpts: 64.4, 	st_marys: 15., status: 0 },
-{ name: 'Cameron Artis-Payne ', 	pos: 'RB', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 92.6, 	ru_yds: 379.6, 	ru_td: 2, 	fl: 14.1, 	rec: 125.4, 	re_yds: 0.6, 	re_td: 1, 	fpts: 64.1, 	st_marys: 15.6, status: 0 },
-{ name: 'Tim Hightower', 	pos: 'RB', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 67.8, 	ru_yds: 276.8, 	ru_td: 3.2, 	fl: 17.7, 	rec: 142.1, 	re_yds: 0.3, 	re_td: 1, 	fpts: 61.3, 	st_marys: 21., status: 0 },
-{ name: 'Jerick McKinnon ', 	pos: 'RB', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 65.6, 	ru_yds: 294.1, 	ru_td: 2, 	fl: 23, 	rec: 166.4, 	re_yds: 0.7, 	re_td: 0.9, 	fpts: 60.3, 	st_marys: 16.2, status: 0 },
-{ name: 'DeAndre Washington ', 	pos: 'RB', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 75.3, 	ru_yds: 307.4, 	ru_td: 1.9, 	fl: 21.8, 	rec: 168.4, 	re_yds: 0.7, 	re_td: 1.8, 	fpts: 59.8, 	st_marys: 15.6, status: 0 },
-{ name: 'Chris Thompson ', 	pos: 'RB', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 48.6, 	ru_yds: 200.1, 	ru_td: 1.2, 	fl: 35, 	rec: 270.7, 	re_yds: 1.4, 	re_td: 1.8, 	fpts: 59, 	st_marys: 15.6, status: 0 },
-{ name: 'Spencer Ware', 	pos: 'RB', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 68.6, 	ru_yds: 322.5, 	ru_td: 3.6, 	fl: 7.3, 	rec: 46, 	re_yds: 0.2, 	re_td: 1.2, 	fpts: 57.3, 	st_marys: 22.8, status: 0 },
-{ name: 'Andre Ellington ', 	pos: 'RB', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 56.7, 	ru_yds: 247.5, 	ru_td: 1.8, 	fl: 22.3, 	rec: 191.5, 	re_yds: 0.8, 	re_td: 2, 	fpts: 55.7, 	st_marys: 15.6, status: 0 },
-{ name: 'Damien Williams ', 	pos: 'RB', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 65.1, 	ru_yds: 241.1, 	ru_td: 1.8, 	fl: 23.5, 	rec: 175.7, 	re_yds: 0.8, 	re_td: 0.9, 	fpts: 55.4, 	st_marys: 15.6, status: 0 },
-{ name: 'Shaun Draughn', 	pos: 'RB', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 74.8, 	ru_yds: 283.4, 	ru_td: 1.7, 	fl: 25.4, 	rec: 167.7, 	re_yds: 0.3, 	re_td: 0.8, 	fpts: 55.3, 	st_marys: 12, status: 0 },
-{ name: 'Devontae Booker ', 	pos: 'RB', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 79, 	ru_yds: 329.4, 	ru_td: 2.1, 	fl: 12.6, 	rec: 98.4, 	re_yds: 0.2, 	re_td: 1.2, 	fpts: 54.4, 	st_marys: 13.8, status: 0 },
-{ name: 'Tre Mason', 	pos: 'RB', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 82.4, 	ru_yds: 318, 	ru_td: 1.8, 	fl: 17, 	rec: 124.9, 	re_yds: 0.2, 	re_td: 0.9, 	fpts: 54.1, 	st_marys: 12, status: 0 },
-{ name: 'Alfred Blue ', 	pos: 'RB', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 84.8, 	ru_yds: 330.3, 	ru_td: 1.8, 	fl: 12.5, 	rec: 96, 	re_yds: 0.3, 	re_td: 0.9, 	fpts: 53.8, 	st_marys: 12.6, status: 0 },
-{ name: 'C.J. Spiller', 	pos: 'RB', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 48.1, 	ru_yds: 190.9, 	ru_td: 1, 	fl: 31.9, 	rec: 228.5, 	re_yds: 1.2, 	re_td: 1.1, 	fpts: 53.3, 	st_marys: 13.2, status: 0 },
-{ name: 'Paul Perkins ', 	pos: 'RB', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 82.2, 	ru_yds: 347.3, 	ru_td: 1.6, 	fl: 13.8, 	rec: 107.6, 	re_yds: 0.2, 	re_td: 1.8, 	fpts: 53.1, 	st_marys: 10.8, status: 0 },
-{ name: 'Ka\'Deem Carey ', 	pos: 'RB', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 77.2, 	ru_yds: 307.4, 	ru_td: 1.9, 	fl: 11.7, 	rec: 83.9, 	re_yds: 0.8, 	re_td: 1.8, 	fpts: 51.8, 	st_marys: 16.2, status: 0 },
-{ name: 'Alfred Morris ', 	pos: 'RB', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 80.6, 	ru_yds: 342.7, 	ru_td: 1.9, 	fl: 8.8, 	rec: 58, 	re_yds: 0.2, 	re_td: 0.9, 	fpts: 50.7, 	st_marys: 12.6, status: 0 },
-{ name: 'Charcandrick West', 	pos: 'RB', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 63.9, 	ru_yds: 253.6, 	ru_td: 2.1, 	fl: 14.4, 	rec: 116.4, 	re_yds: 0.6, 	re_td: 1.8, 	fpts: 49.5, 	st_marys: 16.2, status: 0 },
-{ name: 'Benny Cunningham', 	pos: 'RB', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 52.6, 	ru_yds: 207, 	ru_td: 1.2, 	fl: 24.9, 	rec: 193.6, 	re_yds: 0.6, 	re_td: 0.9, 	fpts: 49, 	st_marys: 10.8, status: 0 },
-{ name: 'Kenyan Drake ', 	pos: 'RB', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 56.6, 	ru_yds: 233.4, 	ru_td: 1.2, 	fl: 19.8, 	rec: 158.7, 	re_yds: 0.6, 	re_td: 1.2, 	fpts: 47.8, 	st_marys: 10.8, status: 0 },
-																
-																
-{ name: 'Antonio Brown ', 	pos: 'WR', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2.9, 	ru_yds: 16.8, 	ru_td: 0, 	fl: 123.7, 	rec: 1647.3, 	re_yds: 10.8, 	re_td: 1.1, 	fpts: 229.1, 	st_marys: 64.8, status: 0 },
-{ name: 'Julio Jones ', 	pos: 'WR', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 116.6, 	rec: 1620.7, 	re_yds: 8.9, 	re_td: 0.8, 	fpts: 213.7, 	st_marys: 53.4, status: 0 },
-{ name: 'Odell Beckham Jr. ', 	pos: 'WR', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.5, 	ru_yds: 2.6, 	ru_td: 0, 	fl: 98, 	rec: 1436.2, 	re_yds: 11.1, 	re_td: 0.1, 	fpts: 210.1, 	st_marys: 66.6, status: 0 },
-{ name: 'DeAndre Hopkins ', 	pos: 'WR', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 100, 	rec: 1424.6, 	re_yds: 9.6, 	re_td: 0.1, 	fpts: 199.7, 	st_marys: 57.6, status: 0 },
-{ name: 'Dez Bryant ', 	pos: 'WR', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 85.6, 	rec: 1201.8, 	re_yds: 10.1, 	re_td: 0.1, 	fpts: 180.2, 	st_marys: 60.6, status: 0 },
-{ name: 'Jordy Nelson', 	pos: 'WR', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.4, 	ru_td: 0, 	fl: 89.4, 	rec: 1260.2, 	re_yds: 8.9, 	re_td: 0.1, 	fpts: 179.2, 	st_marys: 53.4, status: 0 },
-{ name: 'A.J. Green ', 	pos: 'WR', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.1, 	ru_td: 0, 	fl: 86.3, 	rec: 1240.2, 	re_yds: 9.2, 	re_td: 0.9, 	fpts: 177.5, 	st_marys: 55.2, status: 0 },
-{ name: 'Alshon Jeffery ', 	pos: 'WR', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.4, 	ru_yds: 4.8, 	ru_td: 0, 	fl: 85.4, 	rec: 1213.3, 	re_yds: 8.1, 	re_td: 0.1, 	fpts: 169.9, 	st_marys: 48.6, status: 0 },
-{ name: 'Allen Robinson ', 	pos: 'WR', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 78.8, 	rec: 1143.8, 	re_yds: 8.7, 	re_td: 0.1, 	fpts: 166.3, 	st_marys: 52.2, status: 0 },
-{ name: 'T.Y. Hilton ', 	pos: 'WR', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.6, 	ru_yds: 3, 	ru_td: 0, 	fl: 77.8, 	rec: 1188.1, 	re_yds: 7.4, 	re_td: 0.1, 	fpts: 163.5, 	st_marys: 44.4, status: 0 },
-{ name: 'Mike Evans', 	pos: 'WR', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 78.5, 	rec: 1194.5, 	re_yds: 7.5, 	re_td: 0.7, 	fpts: 163.2, 	st_marys: 45, status: 0 },
-{ name: 'Brandon Marshall ', 	pos: 'WR', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 87, 	rec: 1162.4, 	re_yds: 8.2, 	re_td: 1.1, 	fpts: 163, 	st_marys: 49.2, status: 0 },
-{ name: 'Sammy Watkins ', 	pos: 'WR', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.8, 	ru_yds: 3.3, 	ru_td: 0, 	fl: 72.8, 	rec: 1101.8, 	re_yds: 8.1, 	re_td: 0.2, 	fpts: 159.2, 	st_marys: 48.6, status: 0 },
-{ name: 'Keenan Allen', 	pos: 'WR', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 103.2, 	rec: 1192.8, 	re_yds: 6.9, 	re_td: 1.3, 	fpts: 158.2, 	st_marys: 41.4, status: 0 },
-{ name: 'Demaryius Thomas ', 	pos: 'WR', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 86.3, 	rec: 1131.4, 	re_yds: 7.4, 	re_td: 1, 	fpts: 155.3, 	st_marys: 44.4, status: 0 },
-{ name: 'Brandin Cooks', 	pos: 'WR', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 4.6, 	ru_yds: 26.5, 	ru_td: 0.1, 	fl: 84.2, 	rec: 1058.6, 	re_yds: 7.5, 	re_td: 0.2, 	fpts: 153.8, 	st_marys: 45.6, status: 0 },
-{ name: 'Randall Cobb', 	pos: 'WR', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 8.1, 	ru_yds: 45, 	ru_td: 0.1, 	fl: 81.7, 	rec: 1033.3, 	re_yds: 7.5, 	re_td: 0.2, 	fpts: 152.6, 	st_marys: 45.6, status: 0 },
-{ name: 'Amari Cooper ', 	pos: 'WR', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.4, 	ru_yds: 0, 	ru_td: 0, 	fl: 81, 	rec: 1081.4, 	re_yds: 7.2, 	re_td: 0.8, 	fpts: 149.6, 	st_marys: 43.2, status: 0 },
-{ name: 'Jeremy Maclin', 	pos: 'WR', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.6, 	ru_yds: 8.8, 	ru_td: 0, 	fl: 81.5, 	rec: 1040.8, 	re_yds: 7.2, 	re_td: 0.7, 	fpts: 146.9, 	st_marys: 43.2, status: 0 },
-{ name: 'Eric Decker ', 	pos: 'WR', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 77.3, 	rec: 1012.5, 	re_yds: 7.6, 	re_td: 0.7, 	fpts: 145.6, 	st_marys: 45.6, status: 0 },
-{ name: 'Doug Baldwin ', 	pos: 'WR', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 72.9, 	rec: 952.9, 	re_yds: 8, 	re_td: 0.2, 	fpts: 143.2, 	st_marys: 48, status: 0 },
-{ name: 'Kelvin Benjamin ', 	pos: 'WR', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 70.5, 	rec: 956.3, 	re_yds: 8.1, 	re_td: 0.7, 	fpts: 142.8, 	st_marys: 48.6, status: 0 },
-{ name: 'Golden Tate ', 	pos: 'WR', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 4.5, 	ru_yds: 29.5, 	ru_td: 0, 	fl: 91.8, 	rec: 1067.5, 	re_yds: 5.6, 	re_td: 0.7, 	fpts: 142.5, 	st_marys: 33.6, status: 0 },
-{ name: 'Jarvis Landry ', 	pos: 'WR', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 9.1, 	ru_yds: 50.7, 	ru_td: 0.1, 	fl: 95.7, 	rec: 1008.2, 	re_yds: 5.7, 	re_td: 0.8, 	fpts: 139, 	st_marys: 34.8, status: 0 },
-{ name: 'Michael Floyd ', 	pos: 'WR', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.1, 	ru_td: 0, 	fl: 62.5, 	rec: 958.3, 	re_yds: 7.2, 	re_td: 0.2, 	fpts: 138.6, 	st_marys: 43.2, status: 0 },
-{ name: 'Julian Edelman', 	pos: 'WR', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 3.8, 	ru_yds: 24.5, 	ru_td: 0, 	fl: 89.5, 	rec: 972.5, 	re_yds: 6.7, 	re_td: 1, 	fpts: 138.3, 	st_marys: 40.2, status: 0 },
-{ name: 'Larry Fitzgerald ', 	pos: 'WR', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 83.5, 	rec: 981.7, 	re_yds: 6.8, 	re_td: 1.1, 	fpts: 136.9, 	st_marys: 40.8, status: 0 },
-{ name: 'Jordan Matthews ', 	pos: 'WR', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 78.8, 	rec: 966, 	re_yds: 6.6, 	re_td: 0.7, 	fpts: 135, 	st_marys: 39.6, status: 0 },
-{ name: 'DeSean Jackson ', 	pos: 'WR', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.4, 	ru_yds: 6.7, 	ru_td: 0, 	fl: 60.9, 	rec: 965.1, 	re_yds: 6.2, 	re_td: 0.8, 	fpts: 132.5, 	st_marys: 37.2, status: 0 },
-{ name: 'Emmanuel Sanders ', 	pos: 'WR', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2.6, 	ru_yds: 16.7, 	ru_td: 0, 	fl: 69.7, 	rec: 963, 	re_yds: 5.6, 	re_td: 1, 	fpts: 130, 	st_marys: 33.6, status: 0 },
-{ name: 'Donte Moncrief ', 	pos: 'WR', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.8, 	ru_td: 0, 	fl: 66.9, 	rec: 890.5, 	re_yds: 6.5, 	re_td: 0.2, 	fpts: 127.6, 	st_marys: 39, status: 0 },
-{ name: 'John Brown ', 	pos: 'WR', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.8, 	ru_yds: 11.3, 	ru_td: 0, 	fl: 61.5, 	rec: 904.5, 	re_yds: 6.2, 	re_td: 0.8, 	fpts: 127.1, 	st_marys: 37.2, status: 0 },
-{ name: 'Allen Hurns ', 	pos: 'WR', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 60.2, 	rec: 870.2, 	re_yds: 6.4, 	re_td: 0.7, 	fpts: 124.2, 	st_marys: 38.4, status: 0 },
-{ name: 'Devante Parker ', 	pos: 'WR', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 58.8, 	rec: 858.6, 	re_yds: 6, 	re_td: 0.1, 	fpts: 121.6, 	st_marys: 36, status: 0 },
-{ name: 'Michael Crabtree ', 	pos: 'WR', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1, 	ru_yds: 5.5, 	ru_td: 0, 	fl: 73.8, 	rec: 827.4, 	re_yds: 6.2, 	re_td: 0.1, 	fpts: 120.6, 	st_marys: 37.2, status: 0 },
-{ name: 'Torrey Smith', 	pos: 'WR', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 53.7, 	rec: 844.2, 	re_yds: 5, 	re_td: 0.1, 	fpts: 114.2, 	st_marys: 30, status: 0 },
-{ name: 'Stefon Diggs ', 	pos: 'WR', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.4, 	ru_yds: 7.6, 	ru_td: 0, 	fl: 62.5, 	rec: 812.2, 	re_yds: 5.4, 	re_td: 0.1, 	fpts: 114.1, 	st_marys: 32.4, status: 0 },
-{ name: 'Kevin White ', 	pos: 'WR', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 56.1, 	rec: 790.6, 	re_yds: 5.3, 	re_td: 0.2, 	fpts: 110.1, 	st_marys: 31.8, status: 0 },
-{ name: 'Marvin Jones ', 	pos: 'WR', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.6, 	ru_yds: 2.7, 	ru_td: 0, 	fl: 61.8, 	rec: 805.1, 	re_yds: 4.9, 	re_td: 0.1, 	fpts: 110, 	st_marys: 29.4, status: 0 },
-{ name: 'Steve Smith ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 60.7, 	rec: 814.7, 	re_yds: 4.7, 	re_td: 0.3, 	fpts: 109.1, 	st_marys: 28.2, status: 0 },
-{ name: 'Tyler Lockett ', 	pos: 'WR', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 3.1, 	ru_yds: 18.8, 	ru_td: 0, 	fl: 57.4, 	rec: 746.8, 	re_yds: 5.3, 	re_td: 0.9, 	fpts: 106.8, 	st_marys: 31.8, status: 0 },
-{ name: 'Vincent Jackson', 	pos: 'WR', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 53.5, 	rec: 786.5, 	re_yds: 4.7, 	re_td: 0.2, 	fpts: 106.4, 	st_marys: 28.2, status: 0 },
-{ name: 'Willie Snead', 	pos: 'WR', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 63.4, 	rec: 817.7, 	re_yds: 4.6, 	re_td: 1.7, 	fpts: 105.8, 	st_marys: 27.6, status: 0 },
-{ name: 'Markus Wheaton ', 	pos: 'WR', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2, 	ru_yds: 10.9, 	ru_td: 0, 	fl: 51.5, 	rec: 706.2, 	re_yds: 4.6, 	re_td: 0.7, 	fpts: 98.1, 	st_marys: 27.6, status: 0 },
-{ name: 'Tavon Austin', 	pos: 'WR', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 27.2, 	ru_yds: 183.1, 	ru_td: 1.4, 	fl: 51.2, 	rec: 525, 	re_yds: 3.3, 	re_td: 1.1, 	fpts: 97.1, 	st_marys: 28.2, status: 0 },
-{ name: 'Sterling Shepard ', 	pos: 'WR', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 54.3, 	rec: 700.2, 	re_yds: 4.5, 	re_td: 0.8, 	fpts: 95.1, 	st_marys: 27, status: 0 },
-{ name: 'Corey Coleman ', 	pos: 'WR', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1, 	ru_yds: 6, 	ru_td: 0, 	fl: 55, 	rec: 714.3, 	re_yds: 3.9, 	re_td: 0.6, 	fpts: 94.5, 	st_marys: 23.4, status: 0 },
-{ name: 'Terrance Williams ', 	pos: 'WR', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 42.5, 	rec: 663, 	re_yds: 4.7, 	re_td: 0.2, 	fpts: 94, 	st_marys: 28.2, status: 0 },
-{ name: 'Travis Benjamin', 	pos: 'WR', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.3, 	ru_yds: 1.6, 	ru_td: 0, 	fl: 49, 	rec: 686.5, 	re_yds: 4.2, 	re_td: 0.9, 	fpts: 92.2, 	st_marys: 25.2, status: 0 },
-{ name: 'Josh Gordon ', 	pos: 'WR', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 49.7, 	rec: 701.9, 	re_yds: 3.7, 	re_td: 0.2, 	fpts: 91.8, 	st_marys: 22.2, status: 0 },
-{ name: 'Laquon Treadwell ', 	pos: 'WR', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 51.6, 	rec: 678.3, 	re_yds: 4, 	re_td: 0.2, 	fpts: 91.6, 	st_marys: 24, status: 0 },
-{ name: 'Mohamed Sanu ', 	pos: 'WR', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2, 	ru_yds: 11.6, 	ru_td: 0.1, 	fl: 53.2, 	rec: 651.7, 	re_yds: 3.8, 	re_td: 0.2, 	fpts: 89.2, 	st_marys: 23.4, status: 0 },
-{ name: 'Dorial Green-Beckham ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	fl: 43.2, 	rec: 629.5, 	re_yds: 4.3, 	re_td: 0.2, 	fpts: 88.7, 	st_marys: 25.8, status: 0 },
-{ name: 'Pierre Garcon ', 	pos: 'WR', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 55.5, 	rec: 655.9, 	re_yds: 3.9, 	re_td: 0.2, 	fpts: 88.5, 	st_marys: 23.4, status: 0 },
-{ name: 'Kenny Britt', 	pos: 'WR', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.1, 	ru_td: 0, 	fl: 39.7, 	rec: 611.3, 	re_yds: 3.6, 	re_td: 0.2, 	fpts: 82.6, 	st_marys: 21.6, status: 0 },
-{ name: 'Mike Wallace ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.8, 	ru_yds: 4.6, 	ru_td: 0, 	fl: 41.2, 	rec: 559.6, 	re_yds: 3.8, 	re_td: 0.1, 	fpts: 79, 	st_marys: 22.8, status: 0 },
-{ name: 'Kendall Wright ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.3, 	ru_yds: 7.3, 	ru_td: 0, 	fl: 50.4, 	rec: 584.8, 	re_yds: 3.2, 	re_td: 0.2, 	fpts: 78, 	st_marys: 19.2, status: 0 },
-{ name: 'Devin Funchess ', 	pos: 'WR', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.2, 	ru_yds: 7, 	ru_td: 0, 	fl: 40, 	rec: 537, 	re_yds: 4.1, 	re_td: 0.9, 	fpts: 77.5, 	st_marys: 24.6, status: 0 },
-{ name: 'Nelson Agholor ', 	pos: 'WR', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 45.9, 	rec: 593.3, 	re_yds: 3.4, 	re_td: 1.1, 	fpts: 77.4, 	st_marys: 20.4, status: 0 },
-{ name: 'Michael Thomas', 	pos: 'WR', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 41.2, 	rec: 550.2, 	re_yds: 3.8, 	re_td: 0.9, 	fpts: 76.3, 	st_marys: 22.8, status: 0 },
-{ name: 'Kamar Aiken ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 46.3, 	rec: 582.3, 	re_yds: 3.2, 	re_td: 0.8, 	fpts: 75.8, 	st_marys: 19.2, status: 0 },
-{ name: 'Jermaine Kearse ', 	pos: 'WR', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.4, 	ru_td: 0, 	fl: 39.5, 	rec: 533.9, 	re_yds: 3.7, 	re_td: 0.2, 	fpts: 75.6, 	st_marys: 22.2, status: 0 },
-{ name: 'Phillip Dorsett ', 	pos: 'WR', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2.4, 	ru_yds: 13.9, 	ru_td: 0, 	fl: 40.2, 	rec: 528.9, 	re_yds: 3.4, 	re_td: 1.1, 	fpts: 73, 	st_marys: 20.4, status: 0 },
-{ name: 'Ted Ginn ', 	pos: 'WR', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2, 	ru_yds: 14, 	ru_td: 0, 	fl: 32.8, 	rec: 482.7, 	re_yds: 3.9, 	re_td: 0.2, 	fpts: 72.7, 	st_marys: 23.4, status: 0 },
-{ name: 'Will Fuller ', 	pos: 'WR', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.1, 	ru_yds: 6.8, 	ru_td: 0, 	fl: 37, 	rec: 524.2, 	re_yds: 3.3, 	re_td: 0.2, 	fpts: 72.5, 	st_marys: 19.8, status: 0 },
-{ name: 'Robert Woods ', 	pos: 'WR', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.7, 	ru_yds: 3.4, 	ru_td: 0, 	fl: 45, 	rec: 551.7, 	re_yds: 3.1, 	re_td: 0.9, 	fpts: 72.3, 	st_marys: 18.6, status: 0 },
-{ name: 'Justin Hunter ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 42.7, 	rec: 549.7, 	re_yds: 2.8, 	re_td: 0.1, 	fpts: 71.4, 	st_marys: 16.8, status: 0 },
-{ name: 'Brandon LaFell ', 	pos: 'WR', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.5, 	ru_yds: 0.7, 	ru_td: 0, 	fl: 42, 	rec: 546.5, 	re_yds: 2.9, 	re_td: 0.6, 	fpts: 71.1, 	st_marys: 17.4, status: 0 },
-{ name: 'Breshad Perriman ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 38, 	rec: 522.8, 	re_yds: 3.1, 	re_td: 0.2, 	fpts: 70.3, 	st_marys: 18.6, status: 0 },
-{ name: 'Jaelen Strong ', 	pos: 'WR', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 37.2, 	rec: 469.8, 	re_yds: 3.9, 	re_td: 0.1, 	fpts: 69.9, 	st_marys: 23.4, status: 0 },
-{ name: 'Rueben Randle ', 	pos: 'WR', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 38.8, 	rec: 510.9, 	re_yds: 3.1, 	re_td: 0.2, 	fpts: 69, 	st_marys: 18.6, status: 0 },
-{ name: 'Sammie Coates ', 	pos: 'WR', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.2, 	ru_yds: 0.6, 	ru_td: 0, 	fl: 38.1, 	rec: 506.5, 	re_yds: 3.1, 	re_td: 0.2, 	fpts: 68.6, 	st_marys: 18.6, status: 0 },
-{ name: 'Victor Cruz ', 	pos: 'WR', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 37.2, 	rec: 495, 	re_yds: 3.1, 	re_td: 0.1, 	fpts: 67.8, 	st_marys: 18.6, status: 0 },
-{ name: 'Tyler Boyd ', 	pos: 'WR', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 3.8, 	ru_yds: 22.8, 	ru_td: 0.1, 	fl: 39.7, 	rec: 503.9, 	re_yds: 2.7, 	re_td: 0.8, 	fpts: 67.5, 	st_marys: 16.8, status: 0 },
-{ name: 'Rishard Matthews ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.4, 	ru_yds: 1.6, 	ru_td: 0, 	fl: 37.5, 	rec: 500.6, 	re_yds: 2.8, 	re_td: 0.2, 	fpts: 66.8, 	st_marys: 16.8, status: 0 },
-
-
-{ name: 'Rob Gronkowski', 	pos: 'TE', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 80.3, 	rec: 1102.4, 	re_yds: 10, 	re_td: 0.3, 	fpts: 169.6, 	st_marys: 60, status: 0 },
-{ name: 'Greg Olsen ', 	pos: 'TE', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 77, 	rec: 956.7, 	re_yds: 6.7, 	re_td: 0.8, 	fpts: 134, 	st_marys: 40.2, status: 0 },
-{ name: 'Jordan Reed ', 	pos: 'TE', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 82, 	rec: 891.8, 	re_yds: 6.7, 	re_td: 1.6, 	fpts: 126.4, 	st_marys: 40.2, status: 0 },
-{ name: 'Delanie Walker ', 	pos: 'TE', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 71.3, 	rec: 858, 	re_yds: 4.9, 	re_td: 0.6, 	fpts: 114.1, 	st_marys: 29.4, status: 0 },
-{ name: 'Travis Kelce', 	pos: 'TE', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 72.6, 	rec: 836.6, 	re_yds: 5.6, 	re_td: 1.7, 	fpts: 113.7, 	st_marys: 33.6, status: 0 },
-{ name: 'Coby Fleener', 	pos: 'TE', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 69.8, 	rec: 759.1, 	re_yds: 5.8, 	re_td: 0.6, 	fpts: 109.5, 	st_marys: 34.8, status: 0 },
-{ name: 'Gary Barnidge ', 	pos: 'TE', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 62.1, 	rec: 754, 	re_yds: 5.7, 	re_td: 0.6, 	fpts: 108.1, 	st_marys: 34.2, status: 0 },
-{ name: 'Antonio Gates', 	pos: 'TE', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 63, 	rec: 735.3, 	re_yds: 5.6, 	re_td: 0.2, 	fpts: 106.6, 	st_marys: 33.6, status: 0 },
-{ name: 'Tyler Eifert ', 	pos: 'TE', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 59.2, 	rec: 701.9, 	re_yds: 5.8, 	re_td: 0.3, 	fpts: 104.4, 	st_marys: 34.8, status: 0 },
-{ name: 'Jason Witten ', 	pos: 'TE', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 72.6, 	rec: 768.8, 	re_yds: 4.6, 	re_td: 0.8, 	fpts: 102.8, 	st_marys: 27.6, status: 0 },
-{ name: 'Ladarius Green ', 	pos: 'TE', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 59.9, 	rec: 705.9, 	re_yds: 5.2, 	re_td: 0.3, 	fpts: 101.3, 	st_marys: 31.2, status: 0 },
-{ name: 'Jimmy Graham ', 	pos: 'TE', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 60.6, 	rec: 708.3, 	re_yds: 5.3, 	re_td: 0.8, 	fpts: 101, 	st_marys: 31.8, status: 0 },
-{ name: 'Zach Ertz ', 	pos: 'TE', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 64.9, 	rec: 748.8, 	re_yds: 4.2, 	re_td: 0.9, 	fpts: 98.2, 	st_marys: 25.2, status: 0 },
-{ name: 'Julius Thomas ', 	pos: 'TE', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 56.1, 	rec: 606.8, 	re_yds: 5.2, 	re_td: 0.3, 	fpts: 91.1, 	st_marys: 31.2, status: 0 },
-{ name: 'Dwayne Allen ', 	pos: 'TE', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 53.7, 	rec: 594.3, 	re_yds: 5.1, 	re_td: 0.3, 	fpts: 89.5, 	st_marys: 30.6, status: 0 },
-{ name: 'Zach Miller ', 	pos: 'TE', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 53.7, 	rec: 597.7, 	re_yds: 5, 	re_td: 0.3, 	fpts: 89.3, 	st_marys: 30, status: 0 },
-{ name: 'Eric Ebron ', 	pos: 'TE', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 53, 	rec: 581.9, 	re_yds: 4.4, 	re_td: 0.2, 	fpts: 83.8, 	st_marys: 26.4, status: 0 },
-{ name: 'Charles Clay ', 	pos: 'TE', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 56.9, 	rec: 607.9, 	re_yds: 3.9, 	re_td: 0.2, 	fpts: 83.8, 	st_marys: 23.4, status: 0 },
-{ name: 'Jordan Cameron ', 	pos: 'TE', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 46.2, 	rec: 533.1, 	re_yds: 3.8, 	re_td: 0.2, 	fpts: 75.8, 	st_marys: 22.8, status: 0 },
-{ name: 'Martellus Bennett', 	pos: 'TE', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 46, 	rec: 511.1, 	re_yds: 4.2, 	re_td: 0.1, 	fpts: 75.8, 	st_marys: 25.2, status: 0 },
-{ name: 'Kyle Rudolph ', 	pos: 'TE', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 48, 	rec: 496.1, 	re_yds: 4, 	re_td: 0.2, 	fpts: 73.4, 	st_marys: 24, status: 0 },
-{ name: 'Austin Seferian-Jenkins', 	pos: 'TE', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 37.5, 	rec: 461.6, 	re_yds: 3.8, 	re_td: 0.7, 	fpts: 67.8, 	st_marys: 22.8, status: 0 },
-{ name: 'Clive Walford ', 	pos: 'TE', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 41.6, 	rec: 449.2, 	re_yds: 3.8, 	re_td: 0.2, 	fpts: 67.4, 	st_marys: 22.8, status: 0 },
-{ name: 'Jacob Tamme ', 	pos: 'TE', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 46.3, 	rec: 474, 	re_yds: 2.8, 	re_td: 0.6, 	fpts: 63.2, 	st_marys: 16.8, status: 0 },
-{ name: 'Jared Cook', 	pos: 'TE', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 34.8, 	rec: 414.2, 	re_yds: 3.6, 	re_td: 0.7, 	fpts: 61.5, 	st_marys: 21.6, status: 0 },
-{ name: 'Richard Rodgers', 	pos: 'TE', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 35.2, 	rec: 361.6, 	re_yds: 3.7, 	re_td: 0.2, 	fpts: 58.1, 	st_marys: 22.2, status: 0 },
-
-
-{ name: 'Stephen Gostkowski', 	pos: 'K', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 127, 	st_marys: 127, status: 0 },
-{ name: 'Mason Crosby', 	pos: 'K', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 121.4, 	st_marys: 121.4, status: 0 },
-{ name: 'Justin Tucker ', 	pos: 'K', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 120.6, 	st_marys: 120.6, status: 0 },
-{ name: 'Steven Hauschka ', 	pos: 'K', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 120.2, 	st_marys: 120.2, status: 0 },
-{ name: 'Graham Gano ', 	pos: 'K', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 119.6, 	st_marys: 119.6, status: 0 },
-{ name: 'Chris Boswell ', 	pos: 'K', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 118, 	st_marys: 118, status: 0 },
-{ name: 'Dan Bailey ', 	pos: 'K', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 117.5, 	st_marys: 117.5, status: 0 },
-{ name: 'Josh Brown ', 	pos: 'K', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 116.9, 	st_marys: 116.9, status: 0 },
-{ name: 'Chandler Catanzaro ', 	pos: 'K', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 116.5, 	st_marys: 116.5, status: 0 },
-{ name: 'Blair Walsh ', 	pos: 'K', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 114.2, 	st_marys: 114.2, status: 0 },
-{ name: 'Brandon McManus ', 	pos: 'K', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 112.7, 	st_marys: 112.7, status: 0 },
-{ name: 'Adam Vinatieri ', 	pos: 'K', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 111.3, 	st_marys: 111.3, status: 0 },
-{ name: 'Mike Nugent ', 	pos: 'K', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 110.6, 	st_marys: 110.6, status: 0 },
-{ name: 'Cairo Santos', 	pos: 'K', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 110.1, 	st_marys: 110.1, status: 0 },
-{ name: 'Robbie Gould ', 	pos: 'K', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 109.7, 	st_marys: 109.7, status: 0 },
-{ name: 'Matt Prater ', 	pos: 'K', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 107, 	st_marys: 107, status: 0 },
-{ name: 'Dan Carpenter ', 	pos: 'K', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 106.4, 	st_marys: 106.4, status: 0 },
-{ name: 'Nick Novak ', 	pos: 'K', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 106.2, 	st_marys: 106.2, status: 0 },
-{ name: 'Matt Bryant ', 	pos: 'K', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 104.1, 	st_marys: 104.1, status: 0 },
-{ name: 'Sebastian Janikowski ', 	pos: 'K', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 103.6, 	st_marys: 103.6, status: 0 },
-{ name: 'Nick Folk ', 	pos: 'K', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 103.6, 	st_marys: 103.6, status: 0 },
-{ name: 'Dustin Hopkins ', 	pos: 'K', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 103.3, 	st_marys: 103.3, status: 0 },
-{ name: 'Jason Myers ', 	pos: 'K', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 101.8, 	st_marys: 101.8, status: 0 },
-{ name: 'Josh Lambo', 	pos: 'K', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 99.9, 	st_marys: 99.9, status: 0 },
-{ name: 'Roberto Aguayo', 	pos: 'K', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 99.3, 	st_marys: 99.3, status: 0 },
-{ name: 'Phil Dawson', 	pos: 'K', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 97.6, 	st_marys: 97.6, status: 0 },
-{ name: 'Greg Zuerlein', 	pos: 'K', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 96.8, 	st_marys: 96.8, status: 0 },
-{ name: 'Andrew Franks ', 	pos: 'K', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 95.1, 	st_marys: 95.1, status: 0 },
-{ name: 'Travis Coons ', 	pos: 'K', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 94.2, 	st_marys: 94.2, status: 0 },
-{ name: 'Cody Parkey ', 	pos: 'K', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 92.8, 	st_marys: 92.8, status: 0 },
-{ name: 'Caleb Sturgis ', 	pos: 'K', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 92.4, 	st_marys: 92.4, status: 0 },
-{ name: 'Ryan Succop ', 	pos: 'K', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 88.2, 	st_marys: 88.2, status: 0 },
-{ name: 'Kai Forbath', 	pos: 'K', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	fl: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fpts: 85.4, 	st_marys: 85.4, status: 0 }
+{ name: 'Cam Newton ', 	pos: 'QB', 	team: 'CAR', 	att: 499.7, 	comp: 299.1, 	p_yds: 3723.4, 	p_td: 27.1, 	int: 12, 	rush: 121.4, 	ru_yds: 625.8, 	ru_td: 6.9, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.6, 	fpts: 330.2, 	st_marys: 122.7, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Aaron Rodgers', 	pos: 'QB', 	team: ' GB', 	att: 563, 	comp: 357.5, 	p_yds: 4227.7, 	p_td: 34.8, 	int: 7.7, 	rush: 54.1, 	ru_yds: 273.1, 	ru_td: 2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.1, 	fpts: 326.2, 	st_marys: 116.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Russell Wilson ', 	pos: 'QB', 	team: 'SEA', 	att: 478.9, 	comp: 309.1, 	p_yds: 3787.4, 	p_td: 28.9, 	int: 10.9, 	rush: 106.3, 	ru_yds: 578.6, 	ru_td: 3.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 2.8, 	fpts: 316.5, 	st_marys: 105.9, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Andrew Luck ', 	pos: 'QB', 	team: 'IND', 	att: 621, 	comp: 366.6, 	p_yds: 4274.6, 	p_td: 32.7, 	int: 17.3, 	rush: 60.9, 	ru_yds: 286.4, 	ru_td: 2.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.7, 	fpts: 301.7, 	st_marys: 111.3, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Drew Brees', 	pos: 'QB', 	team: ' NO', 	att: 641.9, 	comp: 432, 	p_yds: 4815.3, 	p_td: 31.5, 	int: 14.6, 	rush: 25.1, 	ru_yds: 40.9, 	ru_td: 1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.3, 	fpts: 293.3, 	st_marys: 100.5, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ben Roethlisberger ', 	pos: 'QB', 	team: 'PIT', 	att: 584, 	comp: 383.1, 	p_yds: 4631.2, 	p_td: 29.5, 	int: 14.2, 	rush: 27.1, 	ru_yds: 63.2, 	ru_td: 0.8, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 2.4, 	fpts: 281.5, 	st_marys: 93.3, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Carson Palmer ', 	pos: 'QB', 	team: 'ARI', 	att: 566.9, 	comp: 356.1, 	p_yds: 4438, 	p_td: 30.4, 	int: 13.9, 	rush: 26.3, 	ru_yds: 56, 	ru_td: 0.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.7, 	fpts: 273.7, 	st_marys: 95.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Blake Bortles ', 	pos: 'QB', 	team: 'JAC', 	att: 565, 	comp: 331.9, 	p_yds: 3960.6, 	p_td: 28.4, 	int: 17.6, 	rush: 55.3, 	ru_yds: 312.4, 	ru_td: 1.9, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 4.1, 	fpts: 271.2, 	st_marys: 96.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tyrod Taylor ', 	pos: 'QB', 	team: 'BUF', 	att: 462.3, 	comp: 284.6, 	p_yds: 3396.7, 	p_td: 21, 	int: 11, 	rush: 103, 	ru_yds: 536.8, 	ru_td: 3.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 2.5, 	fpts: 267.4, 	st_marys: 84, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Philip Rivers', 	pos: 'QB', 	team: ' SD', 	att: 621.1, 	comp: 405.8, 	p_yds: 4531, 	p_td: 28.9, 	int: 15.6, 	rush: 24.4, 	ru_yds: 50.4, 	ru_td: 0.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.1, 	fpts: 265.9, 	st_marys: 87.9, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Eli Manning ', 	pos: 'QB', 	team: 'NYG', 	att: 602.8, 	comp: 377, 	p_yds: 4351.1, 	p_td: 29.7, 	int: 14.6, 	rush: 20.5, 	ru_yds: 62.5, 	ru_td: 0.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.7, 	fpts: 265.6, 	st_marys: 92.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Andy Dalton ', 	pos: 'QB', 	team: 'CIN', 	att: 510.8, 	comp: 325.3, 	p_yds: 3870.3, 	p_td: 25.6, 	int: 12.6, 	rush: 65.9, 	ru_yds: 189, 	ru_td: 2.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.5, 	fpts: 259.5, 	st_marys: 92.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kirk Cousins ', 	pos: 'QB', 	team: 'WAS', 	att: 554, 	comp: 360.6, 	p_yds: 4190.6, 	p_td: 26.4, 	int: 15.1, 	rush: 30.4, 	ru_yds: 82.1, 	ru_td: 2.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 4.1, 	fpts: 258.3, 	st_marys: 94.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Matthew Stafford ', 	pos: 'QB', 	team: 'DET', 	att: 582.2, 	comp: 373.4, 	p_yds: 4202.8, 	p_td: 25.9, 	int: 14, 	rush: 36.3, 	ru_yds: 126.5, 	ru_td: 1.4, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.6, 	fpts: 257.7, 	st_marys: 86.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jameis Winston', 	pos: 'QB', 	team: ' TB', 	att: 536.5, 	comp: 321.3, 	p_yds: 3946.7, 	p_td: 23.5, 	int: 15.4, 	rush: 52.3, 	ru_yds: 210.1, 	ru_td: 3.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.6, 	fpts: 256.8, 	st_marys: 92.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Derek Carr ', 	pos: 'QB', 	team: 'OAK', 	att: 589.5, 	comp: 357.7, 	p_yds: 3950.7, 	p_td: 28.4, 	int: 13.9, 	rush: 30.9, 	ru_yds: 116.4, 	ru_td: 0.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.7, 	fpts: 252.3, 	st_marys: 89.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tony Romo ', 	pos: 'QB', 	team: 'DAL', 	att: 518.2, 	comp: 342.3, 	p_yds: 3915.1, 	p_td: 29.1, 	int: 12.9, 	rush: 24.9, 	ru_yds: 69.5, 	ru_td: 0.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3, 	fpts: 251.8, 	st_marys: 90.9, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Ryan Fitzpatrick ', 	pos: 'QB', 	team: 'NYJ', 	att: 549.3, 	comp: 325.3, 	p_yds: 3723.7, 	p_td: 24.7, 	int: 15.5, 	rush: 61, 	ru_yds: 266.8, 	ru_td: 2.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 2.4, 	fpts: 251.6, 	st_marys: 87.3, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ryan Tannehill ', 	pos: 'QB', 	team: 'MIA', 	att: 582.1, 	comp: 362.4, 	p_yds: 4093.9, 	p_td: 24.2, 	int: 13.7, 	rush: 41.8, 	ru_yds: 181.9, 	ru_td: 1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.4, 	fpts: 250.5, 	st_marys: 78.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Matt Ryan ', 	pos: 'QB', 	team: 'ATL', 	att: 607.7, 	comp: 401.7, 	p_yds: 4476.8, 	p_td: 25, 	int: 15.6, 	rush: 33.6, 	ru_yds: 75.9, 	ru_td: 0.3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.9, 	fpts: 249.4, 	st_marys: 76.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Alex Smith', 	pos: 'QB', 	team: ' KC', 	att: 479.7, 	comp: 306.3, 	p_yds: 3411.7, 	p_td: 21.3, 	int: 9.4, 	rush: 72.4, 	ru_yds: 398.2, 	ru_td: 1.8, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 2.8, 	fpts: 248.1, 	st_marys: 74.7, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Marcus Mariota ', 	pos: 'QB', 	team: 'TEN', 	att: 496.1, 	comp: 307.1, 	p_yds: 3567.9, 	p_td: 20.9, 	int: 14.7, 	rush: 58.7, 	ru_yds: 375.4, 	ru_td: 3.1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 4.1, 	fpts: 244.7, 	st_marys: 81.3, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Joe Flacco ', 	pos: 'QB', 	team: 'BAL', 	att: 591.4, 	comp: 361.8, 	p_yds: 4044.4, 	p_td: 24.4, 	int: 15.2, 	rush: 29.6, 	ru_yds: 61.1, 	ru_td: 1.7, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.3, 	fpts: 238.7, 	st_marys: 83.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tom Brady', 	pos: 'QB', 	team: ' NE', 	att: 472.7, 	comp: 301.3, 	p_yds: 3449, 	p_td: 25.8, 	int: 7, 	rush: 26.3, 	ru_yds: 48.8, 	ru_td: 1.4, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 1.9, 	fpts: 236.7, 	st_marys: 85.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jay Cutler ', 	pos: 'QB', 	team: 'CHI', 	att: 526.1, 	comp: 333.8, 	p_yds: 3808, 	p_td: 23.6, 	int: 15.9, 	rush: 39.6, 	ru_yds: 179, 	ru_td: 1.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.4, 	fpts: 233.6, 	st_marys: 78., 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Brock Osweiler ', 	pos: 'QB', 	team: 'HOU', 	att: 539.4, 	comp: 326.9, 	p_yds: 3807.4, 	p_td: 23.6, 	int: 14.2, 	rush: 44.9, 	ru_yds: 124.8, 	ru_td: 1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.1, 	fpts: 230.9, 	st_marys: 76.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Teddy Bridgewater ', 	pos: 'QB', 	team: 'MIN', 	att: 468.1, 	comp: 297.1, 	p_yds: 3321.3, 	p_td: 19, 	int: 11.9, 	rush: 53.2, 	ru_yds: 256, 	ru_td: 2.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3, 	fpts: 218.3, 	st_marys: 70.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Robert Griffin ', 	pos: 'QB', 	team: 'CLE', 	att: 452.9, 	comp: 279.2, 	p_yds: 3252.3, 	p_td: 16.1, 	int: 13.5, 	rush: 95.6, 	ru_yds: 268.3, 	ru_td: 1.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.6, 	fpts: 196.8, 	st_marys: 57.9, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jared Goff', 	pos: 'QB', 	team: ' LA', 	att: 482.1, 	comp: 290.9, 	p_yds: 3306.9, 	p_td: 17.7, 	int: 15.1, 	rush: 38.3, 	ru_yds: 136.5, 	ru_td: 1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.4, 	fpts: 185.7, 	st_marys: 59.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Sam Bradford ', 	pos: 'QB', 	team: 'PHI', 	att: 434.2, 	comp: 271, 	p_yds: 2970.2, 	p_td: 16.8, 	int: 11.2, 	rush: 21.2, 	ru_yds: 50.7, 	ru_td: 0.4, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 3.4, 	fpts: 164.5, 	st_marys: 52.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Blaine Gabbert', 	pos: 'QB', 	team: ' SF', 	att: 346.7, 	comp: 209, 	p_yds: 2355.3, 	p_td: 11.8, 	int: 9.8, 	rush: 41.4, 	ru_yds: 210.1, 	ru_td: 1.2, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 2.9, 	fpts: 144, 	st_marys: 42.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Mark Sanchez ', 	pos: 'QB', 	team: 'DEN', 	att: 372, 	comp: 225.9, 	p_yds: 2553.7, 	p_td: 15, 	int: 12.9, 	rush: 28, 	ru_yds: 84.8, 	ru_td: 0.6, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 2.2, 	fpts: 143.9, 	st_marys: 48.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Colin Kaepernick', 	pos: 'QB', 	team: ' SF', 	att: 186.5, 	comp: 106, 	p_yds: 1194.6, 	p_td: 6.1, 	int: 5.2, 	rush: 32.3, 	ru_yds: 167.8, 	ru_td: 0.8, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0.5, 	fpts: 82.6, 	st_marys: 23.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Paxton Lynch ', 	pos: 'QB', 	team: 'DEN', 	att: 156.4, 	comp: 89.7, 	p_yds: 1036.7, 	p_td: 5.9, 	int: 4.8, 	rush: 16, 	ru_yds: 59.9, 	ru_td: 0.3, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0.3, 	fpts: 62.6, 	st_marys: 19.5, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jimmy Garoppolo', 	pos: 'QB', 	team: ' NE', 	att: 149.2, 	comp: 88.5, 	p_yds: 981.2, 	p_td: 6.2, 	int: 3.6, 	rush: 8.3, 	ru_yds: 16.2, 	ru_td: 0.1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0.4, 	fpts: 58.5, 	st_marys: 19.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Carson Wentz ', 	pos: 'QB', 	team: 'PHI', 	att: 110.7, 	comp: 65.3, 	p_yds: 733.9, 	p_td: 4, 	int: 3.6, 	rush: 11.2, 	ru_yds: 44.8, 	ru_td: 0.5, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0.6, 	fpts: 44.4, 	st_marys: 15, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Josh McCown ', 	pos: 'QB', 	team: 'CLE', 	att: 104.2, 	comp: 64.1, 	p_yds: 726.2, 	p_td: 4.2, 	int: 3, 	rush: 8.2, 	ru_yds: 36.7, 	ru_td: 0.1, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0.9, 	fpts: 42.7, 	st_marys: 13.2, 	status: 0, 	string: 1,	inj: '' },
+																			
+																			
+{ name: 'Adrian Peterson ', 	pos: 'RB', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 296.9, 	ru_yds: 1338.8, 	ru_td: 9.3, 	rec: 33.3, 	re_yds: 238.2, 	re_td: 1, 	fl: 3.1, 	fpts: 212.7, 	st_marys: 61.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Todd Gurley', 	pos: 'RB', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 282.7, 	ru_yds: 1262.1, 	ru_td: 9.2, 	rec: 35.1, 	re_yds: 294.1, 	re_td: 0.9, 	fl: 1.8, 	fpts: 212.2, 	st_marys: 60.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jamaal Charles', 	pos: 'RB', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 223.5, 	ru_yds: 1085.8, 	ru_td: 8.5, 	rec: 48.7, 	re_yds: 376.7, 	re_td: 3.2, 	fl: 3.7, 	fpts: 209.5, 	st_marys: 70.2, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'David Johnson ', 	pos: 'RB', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 220.2, 	ru_yds: 947, 	ru_td: 8.2, 	rec: 55.8, 	re_yds: 508.1, 	re_td: 2.9, 	fl: 1.5, 	fpts: 208.9, 	st_marys: 66.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Lamar Miller ', 	pos: 'RB', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 260.8, 	ru_yds: 1147.3, 	ru_td: 7.2, 	rec: 46.6, 	re_yds: 362.9, 	re_td: 1.6, 	fl: 1.9, 	fpts: 200, 	st_marys: 52.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Le\'Veon Bell ', 	pos: 'RB', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 209, 	ru_yds: 944, 	ru_td: 7.5, 	rec: 52, 	re_yds: 417.5, 	re_td: 2, 	fl: 1.1, 	fpts: 190.9, 	st_marys: 57, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Ezekiel Elliott ', 	pos: 'RB', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 240.1, 	ru_yds: 1065.9, 	ru_td: 7.7, 	rec: 38.1, 	re_yds: 305.2, 	re_td: 1.4, 	fl: 1.6, 	fpts: 188, 	st_marys: 54.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Devonta Freeman ', 	pos: 'RB', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 214.3, 	ru_yds: 870.8, 	ru_td: 7.1, 	rec: 62.6, 	re_yds: 492.9, 	re_td: 2, 	fl: 2, 	fpts: 187.2, 	st_marys: 54.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'LeSean McCoy ', 	pos: 'RB', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 250.6, 	ru_yds: 1078.3, 	ru_td: 6.3, 	rec: 40.6, 	re_yds: 301.9, 	re_td: 1.3, 	fl: 2.3, 	fpts: 179.3, 	st_marys: 45.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Eddie Lacy', 	pos: 'RB', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 228.4, 	ru_yds: 1011.6, 	ru_td: 7.1, 	rec: 34.2, 	re_yds: 291.8, 	re_td: 1.8, 	fl: 2.2, 	fpts: 179.2, 	st_marys: 53.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Mark Ingram', 	pos: 'RB', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 215.6, 	ru_yds: 925.9, 	ru_td: 7.6, 	rec: 52.4, 	re_yds: 364.2, 	re_td: 1.2, 	fl: 1.7, 	fpts: 178.3, 	st_marys: 52.8, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Doug Martin', 	pos: 'RB', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 257.9, 	ru_yds: 1136.1, 	ru_td: 6.2, 	rec: 32.6, 	re_yds: 237.7, 	re_td: 0.9, 	fl: 3.2, 	fpts: 173.5, 	st_marys: 42.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Thomas Rawls ', 	pos: 'RB', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 226.3, 	ru_yds: 1082, 	ru_td: 6.6, 	rec: 22.9, 	re_yds: 179.4, 	re_td: 0.9, 	fl: 1.9, 	fpts: 167.4, 	st_marys: 45., 	status: 0, 	string: 1,	inj: '' },
+{ name: 'C.J. Anderson ', 	pos: 'RB', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 220.2, 	ru_yds: 982, 	ru_td: 6.2, 	rec: 35.5, 	re_yds: 268.7, 	re_td: 1, 	fl: 1.9, 	fpts: 164.6, 	st_marys: 43.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Matt Forte ', 	pos: 'RB', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 210.2, 	ru_yds: 873, 	ru_td: 4.7, 	rec: 45.5, 	re_yds: 356.4, 	re_td: 1.7, 	fl: 1.9, 	fpts: 157.7, 	st_marys: 38.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Carlos Hyde', 	pos: 'RB', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 239.4, 	ru_yds: 1002, 	ru_td: 5.7, 	rec: 33.9, 	re_yds: 209.8, 	re_td: 0.6, 	fl: 1.2, 	fpts: 156.3, 	st_marys: 37.8, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Latavius Murray ', 	pos: 'RB', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 222, 	ru_yds: 931, 	ru_td: 6, 	rec: 33.9, 	re_yds: 229.6, 	re_td: 0.8, 	fl: 1.8, 	fpts: 153.1, 	st_marys: 40.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jonathan Stewart ', 	pos: 'RB', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 227.2, 	ru_yds: 982.6, 	ru_td: 6.1, 	rec: 22.2, 	re_yds: 154.7, 	re_td: 0.9, 	fl: 2, 	fpts: 151.7, 	st_marys: 42., 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Matt Jones ', 	pos: 'RB', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 221.1, 	ru_yds: 876.3, 	ru_td: 5.1, 	rec: 33.5, 	re_yds: 346, 	re_td: 1.3, 	fl: 4.9, 	fpts: 151.2, 	st_marys: 38.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'DeMarco Murray ', 	pos: 'RB', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 209.8, 	ru_yds: 901.2, 	ru_td: 5.8, 	rec: 32.8, 	re_yds: 249.3, 	re_td: 1, 	fl: 2.7, 	fpts: 150.5, 	st_marys: 40.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jeremy Hill ', 	pos: 'RB', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 207.9, 	ru_yds: 875.8, 	ru_td: 7.7, 	rec: 19.1, 	re_yds: 134, 	re_td: 0.8, 	fl: 2.8, 	fpts: 146.3, 	st_marys: 51, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jeremy Langford ', 	pos: 'RB', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 185, 	ru_yds: 751.7, 	ru_td: 5, 	rec: 36.5, 	re_yds: 330.3, 	re_td: 1.6, 	fl: 1.2, 	fpts: 145.5, 	st_marys: 39.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ryan Mathews ', 	pos: 'RB', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 188.7, 	ru_yds: 840.6, 	ru_td: 5.8, 	rec: 32.3, 	re_yds: 237.4, 	re_td: 1, 	fl: 2.9, 	fpts: 142.9, 	st_marys: 40.8, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Frank Gore ', 	pos: 'RB', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 200.4, 	ru_yds: 791, 	ru_td: 5.8, 	rec: 30.7, 	re_yds: 246.4, 	re_td: 1, 	fl: 2.5, 	fpts: 139.3, 	st_marys: 40.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Giovani Bernard ', 	pos: 'RB', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 150.7, 	ru_yds: 661.3, 	ru_td: 3.5, 	rec: 48.3, 	re_yds: 418.1, 	re_td: 1.5, 	fl: 1.2, 	fpts: 136.1, 	st_marys: 30, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Melvin Gordon', 	pos: 'RB', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 226.1, 	ru_yds: 879.9, 	ru_td: 4.4, 	rec: 32.2, 	re_yds: 205.9, 	re_td: 0.7, 	fl: 3.1, 	fpts: 133.1, 	st_marys: 30.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Dion Lewis', 	pos: 'RB', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 100.9, 	ru_yds: 416.3, 	ru_td: 3.1, 	rec: 67.3, 	re_yds: 591, 	re_td: 2.8, 	fl: 1.9, 	fpts: 132.3, 	st_marys: 35.4, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Ameer Abdullah ', 	pos: 'RB', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 184, 	ru_yds: 773.3, 	ru_td: 4.5, 	rec: 33.9, 	re_yds: 253.8, 	re_td: 1, 	fl: 1.9, 	fpts: 131.4, 	st_marys: 33, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Rashad Jennings ', 	pos: 'RB', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 181.6, 	ru_yds: 743.2, 	ru_td: 4.7, 	rec: 30.2, 	re_yds: 245.9, 	re_td: 0.9, 	fl: 2, 	fpts: 128.4, 	st_marys: 33.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Danny Woodhead', 	pos: 'RB', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 83.6, 	ru_yds: 318.3, 	ru_td: 2.1, 	rec: 72.5, 	re_yds: 623.5, 	re_td: 3.8, 	fl: 1.1, 	fpts: 127.4, 	st_marys: 35.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Duke Johnson ', 	pos: 'RB', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 141.9, 	ru_yds: 559.9, 	ru_td: 2.9, 	rec: 57.1, 	re_yds: 464.7, 	re_td: 1.7, 	fl: 1.7, 	fpts: 126.6, 	st_marys: 27.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'T.J. Yeldon ', 	pos: 'RB', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 171, 	ru_yds: 701.8, 	ru_td: 4, 	rec: 37, 	re_yds: 275.3, 	re_td: 1, 	fl: 1.2, 	fpts: 125.1, 	st_marys: 30, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Arian Foster ', 	pos: 'RB', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 165.4, 	ru_yds: 651, 	ru_td: 4.2, 	rec: 35, 	re_yds: 281, 	re_td: 1.4, 	fl: 3, 	fpts: 120.9, 	st_marys: 33.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Isaiah Crowell ', 	pos: 'RB', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 170.7, 	ru_yds: 696.5, 	ru_td: 4.5, 	rec: 20.6, 	re_yds: 185.6, 	re_td: 0.8, 	fl: 1.3, 	fpts: 117.5, 	st_marys: 31.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Justin Forsett ', 	pos: 'RB', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 161.7, 	ru_yds: 715.4, 	ru_td: 4, 	rec: 30, 	re_yds: 194.6, 	re_td: 0.8, 	fl: 1.1, 	fpts: 117.5, 	st_marys: 28.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'LeGarrette Blount', 	pos: 'RB', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 167.7, 	ru_yds: 687.2, 	ru_td: 6.1, 	rec: 10.1, 	re_yds: 70.3, 	re_td: 0.4, 	fl: 0.8, 	fpts: 112.9, 	st_marys: 39., 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Chris Ivory ', 	pos: 'RB', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 160.4, 	ru_yds: 667.3, 	ru_td: 4.6, 	rec: 23, 	re_yds: 164.3, 	re_td: 0.6, 	fl: 2, 	fpts: 110.7, 	st_marys: 31.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Charles Sims', 	pos: 'RB', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 99.8, 	ru_yds: 431.7, 	ru_td: 2.1, 	rec: 43.6, 	re_yds: 398.4, 	re_td: 2.1, 	fl: 1.7, 	fpts: 104.6, 	st_marys: 25.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'DeAngelo Williams ', 	pos: 'RB', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 128.4, 	ru_yds: 574.1, 	ru_td: 4.3, 	rec: 21.8, 	re_yds: 178.4, 	re_td: 0.8, 	fl: 1.1, 	fpts: 103.4, 	st_marys: 30.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jay Ajayi ', 	pos: 'RB', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 141.8, 	ru_yds: 602.8, 	ru_td: 3.4, 	rec: 23.8, 	re_yds: 185.5, 	re_td: 0.8, 	fl: 1, 	fpts: 101.9, 	st_marys: 25.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Darren Sproles ', 	pos: 'RB', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 80.5, 	ru_yds: 362.8, 	ru_td: 2.8, 	rec: 50.6, 	re_yds: 401.2, 	re_td: 1.6, 	fl: 1.2, 	fpts: 100.2, 	st_marys: 26.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Shane Vereen ', 	pos: 'RB', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 69.7, 	ru_yds: 289.3, 	ru_td: 1.7, 	rec: 52.6, 	re_yds: 437.4, 	re_td: 2.4, 	fl: 1.1, 	fpts: 94.9, 	st_marys: 24.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Bilal Powell ', 	pos: 'RB', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 113.1, 	ru_yds: 464.2, 	ru_td: 2.3, 	rec: 35.1, 	re_yds: 279.6, 	re_td: 1.1, 	fl: 1, 	fpts: 92.8, 	st_marys: 20.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Theo Riddick ', 	pos: 'RB', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 56.2, 	ru_yds: 214.6, 	ru_td: 1.1, 	rec: 60.1, 	re_yds: 514.9, 	re_td: 2.5, 	fl: 1, 	fpts: 92.6, 	st_marys: 21.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'James Starks', 	pos: 'RB', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 118.5, 	ru_yds: 488.8, 	ru_td: 3, 	rec: 25.4, 	re_yds: 199.7, 	re_td: 0.9, 	fl: 1.9, 	fpts: 88.5, 	st_marys: 23.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Derrick Henry ', 	pos: 'RB', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 126, 	ru_yds: 524.2, 	ru_td: 3.8, 	rec: 14.5, 	re_yds: 132.4, 	re_td: 0.6, 	fl: 2, 	fpts: 88.3, 	st_marys: 26.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jordan Howard ', 	pos: 'RB', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 107.4, 	ru_yds: 437.6, 	ru_td: 3, 	rec: 20, 	re_yds: 160.1, 	re_td: 0.7, 	fl: 1.2, 	fpts: 79.4, 	st_marys: 22.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Javorius Allen ', 	pos: 'RB', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 108, 	ru_yds: 428.7, 	ru_td: 2.6, 	rec: 24.6, 	re_yds: 194.3, 	re_td: 0.8, 	fl: 1.9, 	fpts: 78.8, 	st_marys: 20.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'C.J. Prosise ', 	pos: 'RB', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 74.4, 	ru_yds: 329.6, 	ru_td: 1.9, 	rec: 38.3, 	re_yds: 300.9, 	re_td: 1, 	fl: 1.2, 	fpts: 78.3, 	st_marys: 17.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Darren McFadden ', 	pos: 'RB', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 98.1, 	ru_yds: 420.9, 	ru_td: 2.7, 	rec: 24.6, 	re_yds: 185.5, 	re_td: 0.7, 	fl: 2.1, 	fpts: 77, 	st_marys: 20.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tevin Coleman ', 	pos: 'RB', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 105.9, 	ru_yds: 435.5, 	ru_td: 2.8, 	rec: 21.5, 	re_yds: 146.6, 	re_td: 0.7, 	fl: 2.2, 	fpts: 74.4, 	st_marys: 21., 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ronnie Hillman ', 	pos: 'RB', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 111.7, 	ru_yds: 449.8, 	ru_td: 3, 	rec: 17, 	re_yds: 107.2, 	re_td: 0.2, 	fl: 1, 	fpts: 72.9, 	st_marys: 19.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jerick McKinnon ', 	pos: 'RB', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 77.9, 	ru_yds: 355.7, 	ru_td: 2.2, 	rec: 26.4, 	re_yds: 192, 	re_td: 0.9, 	fl: 0.9, 	fpts: 71.7, 	st_marys: 18.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Karlos Williams ', 	pos: 'RB', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 84, 	ru_yds: 370.8, 	ru_td: 3.1, 	rec: 12.7, 	re_yds: 99.9, 	re_td: 0.9, 	fl: 1.1, 	fpts: 69.2, 	st_marys: 24, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'DeAndre Washington ', 	pos: 'RB', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 84.3, 	ru_yds: 339.6, 	ru_td: 2.1, 	rec: 26.7, 	re_yds: 206.3, 	re_td: 0.9, 	fl: 1.8, 	fpts: 68.8, 	st_marys: 18, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Chris Johnson ', 	pos: 'RB', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 104.7, 	ru_yds: 427.6, 	ru_td: 2.9, 	rec: 12.2, 	re_yds: 88.9, 	re_td: 0.3, 	fl: 1.8, 	fpts: 67.6, 	st_marys: 19.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Josh Ferguson ', 	pos: 'RB', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 89.8, 	ru_yds: 366, 	ru_td: 1.9, 	rec: 21.3, 	re_yds: 169.3, 	re_td: 0.9, 	fl: 1.9, 	fpts: 66.4, 	st_marys: 16.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Cameron Artis-Payne ', 	pos: 'RB', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 92.6, 	ru_yds: 380.4, 	ru_td: 2, 	rec: 14.1, 	re_yds: 125.4, 	re_td: 0.6, 	fl: 1, 	fpts: 64.4, 	st_marys: 15.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Devontae Booker ', 	pos: 'RB', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 92.6, 	ru_yds: 380.4, 	ru_td: 2.2, 	rec: 14.4, 	re_yds: 113.6, 	re_td: 0.3, 	fl: 1.2, 	fpts: 62.1, 	st_marys: 15, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tim Hightower', 	pos: 'RB', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 67.8, 	ru_yds: 275.9, 	ru_td: 3.2, 	rec: 17.7, 	re_yds: 142.5, 	re_td: 0.3, 	fl: 1, 	fpts: 61.2, 	st_marys: 21., 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Spencer Ware', 	pos: 'RB', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 72.6, 	ru_yds: 337.5, 	ru_td: 3.7, 	rec: 7.9, 	re_yds: 49.5, 	re_td: 0.2, 	fl: 1.2, 	fpts: 59.8, 	st_marys: 23.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Chris Thompson ', 	pos: 'RB', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 48.6, 	ru_yds: 198.9, 	ru_td: 1.2, 	rec: 35.1, 	re_yds: 272.4, 	re_td: 1.4, 	fl: 1.8, 	fpts: 59.2, 	st_marys: 15.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Shaun Draughn', 	pos: 'RB', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 74.8, 	ru_yds: 284.4, 	ru_td: 1.7, 	rec: 25.4, 	re_yds: 168.1, 	re_td: 0.3, 	fl: 0.8, 	fpts: 55.3, 	st_marys: 12, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kenneth Dixon ', 	pos: 'RB', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 74, 	ru_yds: 308.7, 	ru_td: 1.7, 	rec: 18, 	re_yds: 135.9, 	re_td: 0.5, 	fl: 1.2, 	fpts: 55.1, 	st_marys: 13.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Benny Cunningham', 	pos: 'RB', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 59.3, 	ru_yds: 235.5, 	ru_td: 1.3, 	rec: 27.6, 	re_yds: 213.3, 	re_td: 0.7, 	fl: 0.9, 	fpts: 54.8, 	st_marys: 12, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'C.J. Spiller', 	pos: 'RB', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 48.8, 	ru_yds: 190.6, 	ru_td: 1.1, 	rec: 31.9, 	re_yds: 229.2, 	re_td: 1.2, 	fl: 1.1, 	fpts: 53.6, 	st_marys: 13.8, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Paul Perkins ', 	pos: 'RB', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 82.2, 	ru_yds: 344.4, 	ru_td: 1.6, 	rec: 13.8, 	re_yds: 107.8, 	re_td: 0.2, 	fl: 1.8, 	fpts: 52.9, 	st_marys: 10.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Alfred Blue ', 	pos: 'RB', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 82.7, 	ru_yds: 321.6, 	ru_td: 1.8, 	rec: 12.1, 	re_yds: 92.6, 	re_td: 0.3, 	fl: 0.9, 	fpts: 52.4, 	st_marys: 12.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ka\'Deem Carey ', 	pos: 'RB', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 77.4, 	ru_yds: 309.2, 	ru_td: 1.9, 	rec: 11.7, 	re_yds: 84.3, 	re_td: 0.7, 	fl: 1.8, 	fpts: 51.9, 	st_marys: 15.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Andre Ellington ', 	pos: 'RB', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 52.4, 	ru_yds: 228.7, 	ru_td: 1.7, 	rec: 21, 	re_yds: 180.1, 	re_td: 0.8, 	fl: 2, 	fpts: 51.4, 	st_marys: 15, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kenyan Drake ', 	pos: 'RB', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 56, 	ru_yds: 231, 	ru_td: 1.2, 	rec: 19.8, 	re_yds: 158.3, 	re_td: 0.6, 	fl: 1.2, 	fpts: 47.6, 	st_marys: 10.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tyler Ervin ', 	pos: 'RB', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 54.9, 	ru_yds: 221.5, 	ru_td: 1.2, 	rec: 16, 	re_yds: 136.3, 	re_td: 0.7, 	fl: 0, 	fpts: 47.1, 	st_marys: 11.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tre Mason', 	pos: 'RB', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 65.6, 	ru_yds: 254.2, 	ru_td: 1.6, 	rec: 16.6, 	re_yds: 113.2, 	re_td: 0.4, 	fl: 0.9, 	fpts: 46.8, 	st_marys: 12., 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Alfred Morris ', 	pos: 'RB', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 74.4, 	ru_yds: 317, 	ru_td: 1.8, 	rec: 7.5, 	re_yds: 50.1, 	re_td: 0.2, 	fl: 0.9, 	fpts: 46.8, 	st_marys: 12, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Charcandrick West', 	pos: 'RB', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 60.1, 	ru_yds: 239, 	ru_td: 1.9, 	rec: 14, 	re_yds: 113.3, 	re_td: 0.5, 	fl: 1.8, 	fpts: 46.7, 	st_marys: 14.4, 	status: 0, 	string: 1,	inj: '' },
+																			
+																			
+{ name: 'Antonio Brown ', 	pos: 'WR', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 3.1, 	ru_yds: 17, 	ru_td: 0, 	rec: 123.7, 	re_yds: 1649.1, 	re_td: 10.8, 	fl: 1.1, 	fpts: 229.1, 	st_marys: 64.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Julio Jones ', 	pos: 'WR', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.3, 	ru_yds: 1.6, 	ru_td: 0, 	rec: 116.6, 	re_yds: 1624.3, 	re_td: 8.8, 	fl: 0.8, 	fpts: 214.1, 	st_marys: 52.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Odell Beckham Jr. ', 	pos: 'WR', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.8, 	ru_yds: 4.6, 	ru_td: 0, 	rec: 98.1, 	re_yds: 1440, 	re_td: 11.1, 	fl: 0.1, 	fpts: 210.6, 	st_marys: 66.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'DeAndre Hopkins ', 	pos: 'WR', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 100, 	re_yds: 1423.4, 	re_td: 9.6, 	fl: 0.1, 	fpts: 199.5, 	st_marys: 57.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Dez Bryant ', 	pos: 'WR', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 85.6, 	re_yds: 1200.4, 	re_td: 10.1, 	fl: 0.1, 	fpts: 180.1, 	st_marys: 60.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'A.J. Green ', 	pos: 'WR', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.1, 	ru_td: 0, 	rec: 87.5, 	re_yds: 1256.3, 	re_td: 9.3, 	fl: 0.9, 	fpts: 179.5, 	st_marys: 55.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jordy Nelson', 	pos: 'WR', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.4, 	ru_td: 0, 	rec: 87.9, 	re_yds: 1239.9, 	re_td: 8.8, 	fl: 0.1, 	fpts: 176.5, 	st_marys: 52.8, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Alshon Jeffery ', 	pos: 'WR', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.4, 	ru_yds: 4.8, 	ru_td: 0, 	rec: 85.4, 	re_yds: 1213.3, 	re_td: 8, 	fl: 0.1, 	fpts: 169.7, 	st_marys: 48, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Allen Robinson ', 	pos: 'WR', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 78.8, 	re_yds: 1146.2, 	re_td: 8.7, 	fl: 0.1, 	fpts: 166.3, 	st_marys: 52.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Mike Evans', 	pos: 'WR', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 78.5, 	re_yds: 1194.4, 	re_td: 7.6, 	fl: 0.7, 	fpts: 163.8, 	st_marys: 45.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'T.Y. Hilton ', 	pos: 'WR', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.6, 	ru_yds: 2.8, 	ru_td: 0, 	rec: 77.8, 	re_yds: 1188.3, 	re_td: 7.4, 	fl: 0.1, 	fpts: 163.5, 	st_marys: 44.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Brandon Marshall ', 	pos: 'WR', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.2, 	ru_td: 0, 	rec: 87.1, 	re_yds: 1164.6, 	re_td: 8.2, 	fl: 1.1, 	fpts: 163.4, 	st_marys: 49.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Sammy Watkins ', 	pos: 'WR', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.8, 	ru_yds: 3.1, 	ru_td: 0, 	rec: 73.1, 	re_yds: 1106, 	re_td: 8.2, 	fl: 0.2, 	fpts: 159.7, 	st_marys: 49.2, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Keenan Allen', 	pos: 'WR', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 103.3, 	re_yds: 1192.3, 	re_td: 6.9, 	fl: 1.3, 	fpts: 158.2, 	st_marys: 41.4, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Demaryius Thomas ', 	pos: 'WR', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 86.3, 	re_yds: 1131.6, 	re_td: 7.4, 	fl: 1, 	fpts: 155.4, 	st_marys: 44.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Brandin Cooks', 	pos: 'WR', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 4.8, 	ru_yds: 26.9, 	ru_td: 0.1, 	rec: 84.2, 	re_yds: 1059.1, 	re_td: 7.5, 	fl: 0.2, 	fpts: 153.8, 	st_marys: 45.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Randall Cobb', 	pos: 'WR', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 8.1, 	ru_yds: 37.3, 	ru_td: 0.1, 	rec: 81.7, 	re_yds: 1034.1, 	re_td: 7.5, 	fl: 0.2, 	fpts: 152, 	st_marys: 45.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Amari Cooper ', 	pos: 'WR', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.4, 	ru_yds: 0, 	ru_td: 0, 	rec: 81, 	re_yds: 1081.7, 	re_td: 7.2, 	fl: 0.8, 	fpts: 149.7, 	st_marys: 43.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jeremy Maclin', 	pos: 'WR', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.6, 	ru_yds: 8.8, 	ru_td: 0, 	rec: 81.5, 	re_yds: 1040.8, 	re_td: 7.2, 	fl: 0.7, 	fpts: 146.8, 	st_marys: 43.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Eric Decker ', 	pos: 'WR', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	rec: 77, 	re_yds: 1011.4, 	re_td: 7.7, 	fl: 0.7, 	fpts: 145.7, 	st_marys: 46.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Doug Baldwin ', 	pos: 'WR', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.2, 	ru_td: 0, 	rec: 72.9, 	re_yds: 951.6, 	re_td: 8, 	fl: 0.2, 	fpts: 143, 	st_marys: 48, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kelvin Benjamin ', 	pos: 'WR', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	rec: 70.5, 	re_yds: 955.8, 	re_td: 8.1, 	fl: 0.7, 	fpts: 142.6, 	st_marys: 48.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Golden Tate ', 	pos: 'WR', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 4.7, 	ru_yds: 29.7, 	ru_td: 0, 	rec: 91.6, 	re_yds: 1066.4, 	re_td: 5.6, 	fl: 0.7, 	fpts: 142.4, 	st_marys: 33.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jarvis Landry ', 	pos: 'WR', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 9.3, 	ru_yds: 47.1, 	ru_td: 0.1, 	rec: 95.7, 	re_yds: 1008.1, 	re_td: 5.7, 	fl: 0.8, 	fpts: 138.8, 	st_marys: 34.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Michael Floyd ', 	pos: 'WR', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.1, 	ru_td: 0, 	rec: 62.7, 	re_yds: 959.2, 	re_td: 7.2, 	fl: 0.2, 	fpts: 138.5, 	st_marys: 43.2, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Julian Edelman', 	pos: 'WR', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 4, 	ru_yds: 24.9, 	ru_td: 0, 	rec: 89.5, 	re_yds: 972.3, 	re_td: 6.7, 	fl: 1, 	fpts: 138.1, 	st_marys: 40.2, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Larry Fitzgerald ', 	pos: 'WR', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 83.5, 	re_yds: 980.4, 	re_td: 6.8, 	fl: 1.1, 	fpts: 136.6, 	st_marys: 40.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jordan Matthews ', 	pos: 'WR', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 78.7, 	re_yds: 964.6, 	re_td: 6.6, 	fl: 0.7, 	fpts: 134.8, 	st_marys: 39.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'DeSean Jackson ', 	pos: 'WR', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.4, 	ru_yds: 7.1, 	ru_td: 0, 	rec: 61, 	re_yds: 967.5, 	re_td: 6.2, 	fl: 0.8, 	fpts: 132.9, 	st_marys: 37.2, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Emmanuel Sanders ', 	pos: 'WR', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2.8, 	ru_yds: 17.1, 	ru_td: 0, 	rec: 69.7, 	re_yds: 962.4, 	re_td: 5.6, 	fl: 1, 	fpts: 129.8, 	st_marys: 33.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Donte Moncrief ', 	pos: 'WR', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.8, 	ru_td: 0, 	rec: 67, 	re_yds: 891.2, 	re_td: 6.4, 	fl: 0.2, 	fpts: 127.5, 	st_marys: 38.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'John Brown ', 	pos: 'WR', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.8, 	ru_yds: 11.3, 	ru_td: 0, 	rec: 61.7, 	re_yds: 905.3, 	re_td: 6.2, 	fl: 0.8, 	fpts: 127.1, 	st_marys: 37.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Allen Hurns ', 	pos: 'WR', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 60.2, 	re_yds: 870.3, 	re_td: 6.4, 	fl: 0.7, 	fpts: 124.1, 	st_marys: 38.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Devante Parker ', 	pos: 'WR', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	rec: 58.8, 	re_yds: 858.6, 	re_td: 6, 	fl: 0.1, 	fpts: 121.6, 	st_marys: 36, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Michael Crabtree ', 	pos: 'WR', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1, 	ru_yds: 5.5, 	ru_td: 0, 	rec: 73.8, 	re_yds: 826.8, 	re_td: 6.2, 	fl: 0.1, 	fpts: 120.5, 	st_marys: 37.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Stefon Diggs ', 	pos: 'WR', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.4, 	ru_yds: 7.4, 	ru_td: 0, 	rec: 62.6, 	re_yds: 814.5, 	re_td: 5.4, 	fl: 0.1, 	fpts: 114.4, 	st_marys: 32.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Torrey Smith', 	pos: 'WR', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 53.5, 	re_yds: 844, 	re_td: 5, 	fl: 0.1, 	fpts: 114.1, 	st_marys: 30, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kevin White ', 	pos: 'WR', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 56.1, 	re_yds: 791.1, 	re_td: 5.2, 	fl: 0.2, 	fpts: 110.1, 	st_marys: 31.2, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Marvin Jones ', 	pos: 'WR', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.6, 	ru_yds: 2.5, 	ru_td: 0, 	rec: 61, 	re_yds: 794, 	re_td: 4.8, 	fl: 0.1, 	fpts: 108.4, 	st_marys: 28.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tyler Lockett ', 	pos: 'WR', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 3.3, 	ru_yds: 19.4, 	ru_td: 0, 	rec: 57.4, 	re_yds: 747.9, 	re_td: 5.3, 	fl: 0.9, 	fpts: 106.9, 	st_marys: 31.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Vincent Jackson', 	pos: 'WR', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 53.5, 	re_yds: 786.8, 	re_td: 4.7, 	fl: 0.2, 	fpts: 106.2, 	st_marys: 28.2, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Willie Snead', 	pos: 'WR', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 63.3, 	re_yds: 817.9, 	re_td: 4.6, 	fl: 1.7, 	fpts: 105.9, 	st_marys: 27.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Steve Smith ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 57.2, 	re_yds: 762.3, 	re_td: 4.6, 	fl: 0.3, 	fpts: 103.3, 	st_marys: 27.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Markus Wheaton ', 	pos: 'WR', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 2, 	ru_yds: 11.1, 	ru_td: 0, 	rec: 52.6, 	re_yds: 721.3, 	re_td: 4.7, 	fl: 0.7, 	fpts: 100.2, 	st_marys: 28.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Sterling Shepard ', 	pos: 'WR', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 56, 	re_yds: 720.9, 	re_td: 4.6, 	fl: 0.8, 	fpts: 98.3, 	st_marys: 27.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tavon Austin', 	pos: 'WR', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 27.8, 	ru_yds: 183.2, 	ru_td: 1.4, 	rec: 51.2, 	re_yds: 525.1, 	re_td: 3.3, 	fl: 1.1, 	fpts: 97, 	st_marys: 28.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Corey Coleman ', 	pos: 'WR', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1, 	ru_yds: 5.8, 	ru_td: 0, 	rec: 54.9, 	re_yds: 716.6, 	re_td: 3.9, 	fl: 0.6, 	fpts: 94.8, 	st_marys: 23.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Terrance Williams ', 	pos: 'WR', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 42.4, 	re_yds: 661.1, 	re_td: 4.7, 	fl: 0.2, 	fpts: 93.8, 	st_marys: 28.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Josh Gordon ', 	pos: 'WR', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 50.1, 	re_yds: 709.6, 	re_td: 3.7, 	fl: 0.2, 	fpts: 92.9, 	st_marys: 22.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Travis Benjamin', 	pos: 'WR', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.3, 	ru_yds: 1.6, 	ru_td: 0, 	rec: 49, 	re_yds: 686.6, 	re_td: 4.2, 	fl: 0.9, 	fpts: 92.2, 	st_marys: 25.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Laquon Treadwell ', 	pos: 'WR', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.2, 	ru_td: 0, 	rec: 50.1, 	re_yds: 659, 	re_td: 4, 	fl: 0.2, 	fpts: 89.3, 	st_marys: 24, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Mohamed Sanu ', 	pos: 'WR', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.8, 	ru_yds: 11.2, 	ru_td: 0.1, 	rec: 53.2, 	re_yds: 651.7, 	re_td: 3.8, 	fl: 0.2, 	fpts: 89.2, 	st_marys: 23.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Dorial Green-Beckham ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.1, 	ru_yds: 6.4, 	ru_td: 0, 	rec: 42.8, 	re_yds: 623.2, 	re_td: 4.3, 	fl: 0.2, 	fpts: 88.8, 	st_marys: 25.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Pierre Garcon ', 	pos: 'WR', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 55, 	re_yds: 650, 	re_td: 3.8, 	fl: 0.2, 	fpts: 87.7, 	st_marys: 22.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kamar Aiken ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 50.9, 	re_yds: 646.6, 	re_td: 3.6, 	fl: 0.8, 	fpts: 84.9, 	st_marys: 21.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Michael Thomas', 	pos: 'WR', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 45.7, 	re_yds: 613.7, 	re_td: 4.2, 	fl: 0.9, 	fpts: 84.7, 	st_marys: 25.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Phillip Dorsett ', 	pos: 'WR', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 3, 	ru_yds: 16, 	ru_td: 0, 	rec: 46.5, 	re_yds: 599, 	re_td: 3.8, 	fl: 1.1, 	fpts: 82.6, 	st_marys: 22.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kenny Britt', 	pos: 'WR', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0.1, 	ru_td: 0, 	rec: 39.7, 	re_yds: 611.6, 	re_td: 3.6, 	fl: 0.2, 	fpts: 82.6, 	st_marys: 21.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Sammie Coates ', 	pos: 'WR', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.3, 	ru_yds: 2, 	ru_td: 0, 	rec: 44.4, 	re_yds: 592.2, 	re_td: 3.5, 	fl: 0.2, 	fpts: 79.8, 	st_marys: 21, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Mike Wallace ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.8, 	ru_yds: 4.6, 	ru_td: 0, 	rec: 41.2, 	re_yds: 560.3, 	re_td: 3.8, 	fl: 0.1, 	fpts: 79.1, 	st_marys: 22.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Devin Funchess ', 	pos: 'WR', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.2, 	ru_yds: 7, 	ru_td: 0, 	rec: 40.6, 	re_yds: 546.5, 	re_td: 4.2, 	fl: 0.9, 	fpts: 78.6, 	st_marys: 25.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Nelson Agholor ', 	pos: 'WR', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 45.9, 	re_yds: 593.3, 	re_td: 3.4, 	fl: 1.1, 	fpts: 77.3, 	st_marys: 20.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kendall Wright ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.2, 	ru_yds: 0.8, 	ru_td: 0, 	rec: 50.4, 	re_yds: 584.6, 	re_td: 3.2, 	fl: 0.2, 	fpts: 77.3, 	st_marys: 19.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jermaine Kearse ', 	pos: 'WR', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.1, 	ru_yds: 0.4, 	ru_td: 0, 	rec: 39.7, 	re_yds: 534.2, 	re_td: 3.7, 	fl: 0.2, 	fpts: 75.6, 	st_marys: 22.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Will Fuller ', 	pos: 'WR', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.1, 	ru_yds: 6.8, 	ru_td: 0, 	rec: 37, 	re_yds: 524.2, 	re_td: 3.3, 	fl: 0.2, 	fpts: 72.4, 	st_marys: 19.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Robert Woods ', 	pos: 'WR', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.6, 	ru_yds: 3.2, 	ru_td: 0, 	rec: 45, 	re_yds: 551.6, 	re_td: 3.1, 	fl: 0.9, 	fpts: 72.3, 	st_marys: 18.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ted Ginn ', 	pos: 'WR', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 1.9, 	ru_yds: 13.5, 	ru_td: 0, 	rec: 32.1, 	re_yds: 469.5, 	re_td: 3.8, 	fl: 0.2, 	fpts: 70.6, 	st_marys: 22.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Brandon LaFell ', 	pos: 'WR', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.5, 	ru_yds: 0.7, 	ru_td: 0, 	rec: 41.8, 	re_yds: 542.8, 	re_td: 2.9, 	fl: 0.6, 	fpts: 70.5, 	st_marys: 17.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Justin Hunter ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 41.7, 	re_yds: 537, 	re_td: 2.8, 	fl: 0.1, 	fpts: 70.1, 	st_marys: 16.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jaelen Strong ', 	pos: 'WR', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 37.2, 	re_yds: 469.6, 	re_td: 3.9, 	fl: 0.1, 	fpts: 69.9, 	st_marys: 23.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Breshad Perriman ', 	pos: 'WR', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 37.2, 	re_yds: 511, 	re_td: 3, 	fl: 0.2, 	fpts: 68.5, 	st_marys: 18, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Rishard Matthews ', 	pos: 'WR', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0.4, 	ru_yds: 1.6, 	ru_td: 0, 	rec: 37.5, 	re_yds: 499.6, 	re_td: 2.8, 	fl: 0.2, 	fpts: 66.7, 	st_marys: 16.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tyler Boyd ', 	pos: 'WR', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 3.8, 	ru_yds: 22.8, 	ru_td: 0.1, 	rec: 38.6, 	re_yds: 491.8, 	re_td: 2.6, 	fl: 0.8, 	fpts: 65.8, 	st_marys: 16.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Anquan Boldin ', 	pos: 'WR', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 40.8, 	re_yds: 484.3, 	re_td: 3, 	fl: 1.2, 	fpts: 64.1, 	st_marys: 18, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Victor Cruz ', 	pos: 'WR', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 34.9, 	re_yds: 468.2, 	re_td: 2.8, 	fl: 0.2, 	fpts: 63.1, 	st_marys: 16.8, 	status: 0, 	string: 1,	inj: '' },
+																			
+																			
+{ name: 'Rob Gronkowski', 	pos: 'TE', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 80.6, 	re_yds: 1099.7, 	re_td: 10.1, 	fl: 0.3, 	fpts: 170.1, 	st_marys: 60.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Greg Olsen ', 	pos: 'TE', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 77.5, 	re_yds: 973.9, 	re_td: 6.5, 	fl: 0.8, 	fpts: 134.6, 	st_marys: 39, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jordan Reed ', 	pos: 'TE', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 84.1, 	re_yds: 911.5, 	re_td: 7.1, 	fl: 1.6, 	fpts: 130.6, 	st_marys: 42.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Delanie Walker ', 	pos: 'TE', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 72.8, 	re_yds: 877.7, 	re_td: 4.9, 	fl: 0.3, 	fpts: 116.8, 	st_marys: 29.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Travis Kelce', 	pos: 'TE', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 72.6, 	re_yds: 835.7, 	re_td: 5.6, 	fl: 2.1, 	fpts: 112.8, 	st_marys: 33.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Coby Fleener', 	pos: 'TE', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 70.3, 	re_yds: 774.2, 	re_td: 5.6, 	fl: 0.3, 	fpts: 110.6, 	st_marys: 33.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ladarius Green ', 	pos: 'TE', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 60.9, 	re_yds: 728.6, 	re_td: 5.5, 	fl: 0.3, 	fpts: 105.4, 	st_marys: 33, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Antonio Gates', 	pos: 'TE', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 61.6, 	re_yds: 717.2, 	re_td: 5.4, 	fl: 0.2, 	fpts: 103.8, 	st_marys: 32.4, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Gary Barnidge ', 	pos: 'TE', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 59.6, 	re_yds: 727.8, 	re_td: 5.2, 	fl: 0.3, 	fpts: 103.7, 	st_marys: 31.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Tyler Eifert ', 	pos: 'TE', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 57.3, 	re_yds: 679.7, 	re_td: 5.8, 	fl: 0.3, 	fpts: 102, 	st_marys: 34.8, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Jimmy Graham ', 	pos: 'TE', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 60.5, 	re_yds: 701.6, 	re_td: 5.1, 	fl: 0.8, 	fpts: 99.3, 	st_marys: 30.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jason Witten ', 	pos: 'TE', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 70.9, 	re_yds: 752.3, 	re_td: 4.3, 	fl: 0.8, 	fpts: 99.1, 	st_marys: 25.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Zach Ertz ', 	pos: 'TE', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 64.6, 	re_yds: 745.8, 	re_td: 4, 	fl: 0.9, 	fpts: 96.9, 	st_marys: 24, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Julius Thomas ', 	pos: 'TE', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 55.6, 	re_yds: 604, 	re_td: 5.1, 	fl: 0.3, 	fpts: 90.7, 	st_marys: 30.6, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Zach Miller ', 	pos: 'TE', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 53.1, 	re_yds: 595.8, 	re_td: 5.2, 	fl: 0.3, 	fpts: 90, 	st_marys: 31.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Dwayne Allen ', 	pos: 'TE', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 52.3, 	re_yds: 577, 	re_td: 5.3, 	fl: 0.3, 	fpts: 88.8, 	st_marys: 31.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Martellus Bennett', 	pos: 'TE', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 51.6, 	re_yds: 587.4, 	re_td: 4.9, 	fl: 0.1, 	fpts: 87.8, 	st_marys: 29.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Eric Ebron ', 	pos: 'TE', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 52.2, 	re_yds: 583.4, 	re_td: 4.3, 	fl: 0.2, 	fpts: 83.9, 	st_marys: 25.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Charles Clay ', 	pos: 'TE', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 54, 	re_yds: 590.5, 	re_td: 3.7, 	fl: 0.2, 	fpts: 80.6, 	st_marys: 22.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kyle Rudolph ', 	pos: 'TE', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 47, 	re_yds: 484.2, 	re_td: 4.2, 	fl: 0.2, 	fpts: 73.2, 	st_marys: 25.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jordan Cameron ', 	pos: 'TE', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 44, 	re_yds: 508.8, 	re_td: 3.5, 	fl: 0.2, 	fpts: 71.4, 	st_marys: 21, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Clive Walford ', 	pos: 'TE', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 41.9, 	re_yds: 455, 	re_td: 3.8, 	fl: 0.2, 	fpts: 68, 	st_marys: 22.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Austin Seferian-Jenkins', 	pos: 'TE', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 34.6, 	re_yds: 433.7, 	re_td: 3.8, 	fl: 0.7, 	fpts: 64.5, 	st_marys: 22.8, 	status: 0, 	string: 1,	inj: 'INJ' },
+{ name: 'Jacob Tamme ', 	pos: 'TE', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 46.3, 	re_yds: 478.3, 	re_td: 2.6, 	fl: 0.3, 	fpts: 63.1, 	st_marys: 15.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jared Cook', 	pos: 'TE', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 34.6, 	re_yds: 420.8, 	re_td: 3.4, 	fl: 0.7, 	fpts: 60.8, 	st_marys: 20.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Richard Rodgers', 	pos: 'TE', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 35.9, 	re_yds: 366.9, 	re_td: 4, 	fl: 0.2, 	fpts: 60, 	st_marys: 24, 	status: 0, 	string: 1,	inj: '' },
+																			
+																			
+{ name: 'Stephen Gostkowski', 	pos: 'K', 	team: ' NE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 127, 	st_marys: 127, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Mason Crosby', 	pos: 'K', 	team: ' GB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 121.4, 	st_marys: 121.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Justin Tucker ', 	pos: 'K', 	team: 'BAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 120.6, 	st_marys: 120.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Steven Hauschka ', 	pos: 'K', 	team: 'SEA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 120.2, 	st_marys: 120.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Graham Gano ', 	pos: 'K', 	team: 'CAR', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 119.6, 	st_marys: 119.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Chris Boswell ', 	pos: 'K', 	team: 'PIT', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 118, 	st_marys: 118, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Dan Bailey ', 	pos: 'K', 	team: 'DAL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 117.5, 	st_marys: 117.5, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Josh Brown ', 	pos: 'K', 	team: 'NYG', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 116.9, 	st_marys: 116.9, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Chandler Catanzaro ', 	pos: 'K', 	team: 'ARI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 116.5, 	st_marys: 116.5, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Blair Walsh ', 	pos: 'K', 	team: 'MIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 114.2, 	st_marys: 114.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Brandon McManus ', 	pos: 'K', 	team: 'DEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 112.7, 	st_marys: 112.7, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Adam Vinatieri ', 	pos: 'K', 	team: 'IND', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 111.3, 	st_marys: 111.3, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Mike Nugent ', 	pos: 'K', 	team: 'CIN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 110.6, 	st_marys: 110.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Cairo Santos', 	pos: 'K', 	team: ' KC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 110.1, 	st_marys: 110.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Robbie Gould ', 	pos: 'K', 	team: 'CHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 109.7, 	st_marys: 109.7, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Matt Prater ', 	pos: 'K', 	team: 'DET', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 107, 	st_marys: 107, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Dan Carpenter ', 	pos: 'K', 	team: 'BUF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 106.4, 	st_marys: 106.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Nick Novak ', 	pos: 'K', 	team: 'HOU', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 106.2, 	st_marys: 106.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Matt Bryant ', 	pos: 'K', 	team: 'ATL', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 104.1, 	st_marys: 104.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Sebastian Janikowski ', 	pos: 'K', 	team: 'OAK', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 103.6, 	st_marys: 103.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Nick Folk ', 	pos: 'K', 	team: 'NYJ', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 103.6, 	st_marys: 103.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Dustin Hopkins ', 	pos: 'K', 	team: 'WAS', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 103.3, 	st_marys: 103.3, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Jason Myers ', 	pos: 'K', 	team: 'JAC', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 101.8, 	st_marys: 101.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Josh Lambo', 	pos: 'K', 	team: ' SD', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 99.9, 	st_marys: 99.9, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Roberto Aguayo', 	pos: 'K', 	team: ' TB', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 99.3, 	st_marys: 99.3, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Phil Dawson', 	pos: 'K', 	team: ' SF', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 97.6, 	st_marys: 97.6, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Greg Zuerlein', 	pos: 'K', 	team: ' LA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 96.8, 	st_marys: 96.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Andrew Franks ', 	pos: 'K', 	team: 'MIA', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 95.1, 	st_marys: 95.1, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Travis Coons ', 	pos: 'K', 	team: 'CLE', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 94.2, 	st_marys: 94.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Cody Parkey ', 	pos: 'K', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 92.8, 	st_marys: 92.8, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Caleb Sturgis ', 	pos: 'K', 	team: 'PHI', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 92.4, 	st_marys: 92.4, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Ryan Succop ', 	pos: 'K', 	team: 'TEN', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 88.2, 	st_marys: 88.2, 	status: 0, 	string: 1,	inj: '' },
+{ name: 'Kai Forbath', 	pos: 'K', 	team: ' NO', 	att: 0, 	comp: 0, 	p_yds: 0, 	p_td: 0, 	int: 0, 	rush: 0, 	ru_yds: 0, 	ru_td: 0, 	rec: 0, 	re_yds: 0, 	re_td: 0, 	fl: 0, 	fpts: 85.4, 	st_marys: 85.4, 	status: 0, 	string: 1,	inj: '' }
 
 ];
 
@@ -286,6 +286,161 @@ app.controller('ctlr', function($scope) {
 				r.status++;
 			else
 				r.status = 0;
+	};
+
+	$scope.multifunc = function() {
+		$scope.bubbleSort();
+		$scope.findTeammate();
+	};
+
+	$scope.bubbleSort = function() {
+	   var len = $scope.rowCollection.length;
+	   for (var i = len-1; i>=0; i--){
+	     for(var j = 1; j<=i; j++){
+	       if($scope.rowCollection[j-1].fpts<=$scope.rowCollection[j].fpts){
+	           var temp = $scope.rowCollection[j-1];
+	           $scope.rowCollection[j-1] = $scope.rowCollection[j];
+	           $scope.rowCollection[j] = temp;
+	        }
+	     }
+	   }
+	   return $scope.rowCollection;
+	};
+
+	$scope.findTeammate = function() {
+
+		for (var i = 0; i < $scope.rowCollection.length - 1; i++) {
+			if ($scope.rowCollection[i].string == 0)
+			{
+				var pos1 = $scope.rowCollection[i].pos.trim();
+				var team1 = $scope.rowCollection[i].team.trim();
+				var no_match = true;
+				for (var j = i + 1; j < $scope.rowCollection.length; j++) {
+					var pos2 = $scope.rowCollection[j].pos.trim();
+					var team2 = $scope.rowCollection[j].team.trim();
+					if (((pos1 == pos2) || ((pos1 == 'WR' && pos2 == 'TE') || (pos1 == 'TE' && pos2 == 'WR'))) && (team1 == team2))
+					{
+						if ($scope.rowCollection[j].string == 0)
+						{
+							no_match = false;
+							var pts1 = $scope.rowCollection[i].fpts;
+							var pts2 = $scope.rowCollection[j].fpts;
+
+							if (pos1 == 'QB')
+							{
+								if (pts1 > pts2)
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 2;
+								}
+								
+							}
+							else if (pos1 == 'RB')
+							{
+								if (pts1 >= (pts2 * 3.4))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 3;
+								}
+								else if (pts1 >= (pts2 * 2.7))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 2.5;
+								}
+								else if (pts1 >= (pts2 * 2.1))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 2;
+								}
+								else if (pts1 >= (pts2 * 1.4))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1.25;
+									$scope.rowCollection[j].string = 1.75;
+								}
+								else
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1.5;
+									$scope.rowCollection[j].string = 1.5;
+								}
+							}
+							else if ((pos1 == 'WR') || (pos1 == 'TE') || ((pos1 == 'WR') && (pos2 == 'TE')) || ((pos2 == 'WR') && (pos1 == 'TE')))
+							{
+								console.log($scope.rowCollection[i].name);
+								console.log($scope.rowCollection[j].name);
+								if (pts1 >= (pts2 * 2.7))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 3.5;
+								}
+								else if (pts1 >= (pts2 * 2.4))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 3;
+								}
+								else if (pts1 >= (pts2 * 2.1))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 2.5;
+								}
+								else if (pts1 >= (pts2 * 1.7))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1;
+									$scope.rowCollection[j].string = 2;
+								}
+								else if (pts1 >= (pts2 * 1.3))
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1.25;
+									$scope.rowCollection[j].string = 1.75;
+								}
+								else if (pts2 >= (pts1 * 1.25))
+								{
+									if ($scope.rowCollection[j].string == 0)
+										$scope.rowCollection[j].string = 1.25;
+									$scope.rowCollection[i].string = 1.75;
+								}
+								else if (pts2 >= (pts1 * 1.6))
+								{
+									if ($scope.rowCollection[j].string == 0)
+										$scope.rowCollection[j].string = 1;
+									$scope.rowCollection[i].string = 2;
+								}
+								else if (pts2 >= (pts1 * 2))
+								{
+									if ($scope.rowCollection[j].string == 0)
+										$scope.rowCollection[j].string = 1;
+									$scope.rowCollection[i].string = 2.5;
+								}
+								else if (pts2 >= (pts1 * 2.3))
+								{
+									if ($scope.rowCollection[j].string == 0)
+										$scope.rowCollection[j].string = 1;
+									$scope.rowCollection[i].string = 3;
+								}
+								else
+								{
+									if ($scope.rowCollection[i].string == 0)
+										$scope.rowCollection[i].string = 1.5;
+									$scope.rowCollection[j].string = 1.5;
+								}
+							}
+						}0
+					}
+				}
+				if (no_match)
+					$scope.rowCollection[i].string = 1;
+			}		
+		}
 	};
 
 	$scope.findPos = function(p) {
@@ -425,14 +580,12 @@ app.controller('ctlr', function($scope) {
 		{
 			$scope.isgood = true;
 			$scope.isbad = false;
-			console.log("is good = " + $scope.isgood);
 			return "Good";
 		}
 		else if (team == "NO" || team == "CLE" || team == "SF" || team == "WAS" || team == "IND" || team == "PHI" || team == "BUF" || team == "NYG")
 		{
 			$scope.isgood = false;
 			$scope.isbad = true;
-			console.log("is bad = " + $scope.isbad);
 			return "Bad";
 		}
 		else {

@@ -56,11 +56,28 @@ h2 {
 }
 
 .green_cell {
-	background-color: #00FF00;
+	font-weight: bold;
+	color: #00C957;
+}
+
+.lightgreen_cell {
+	font-weight: bold;
+	color: #ADFF2F;
+}
+
+.yellow_cell {
+	font-weight: bold;
+	color: #ffd700;	
+}
+
+.orange_cell {
+	font-weight: bold;
+	color: #ff9800;	
 }
 
 .red_cell {
-	background-color: #FF0000;
+	font-weight: bold;
+	color: #FF0000;
 }
 
 .invisible {

@@ -27,7 +27,7 @@
             	<td colspan="5" style="text-align:center;" data-column="3"><small><b>PASSING</b></small></td>
             	<td colspan="3" style="text-align:center;" data-column="8"><small><b>RUSHING</b></small></td>
             	<td colspan="3" style="text-align:center;" data-column="11"><small><b>RECEIVING</b></small></td>
-            	<td colspan="6" style="text-align:center;" data-column="14"><small><b>MISC</b></small></td>
+            	<td colspan="8" style="text-align:center;" data-column="14"><small><b>MISC</b></small></td>
             </tr>
             <tr class="tablesorter-header">
             	<th style="width:10px;" data-column="0" class="tablesorter-header">
@@ -139,6 +139,10 @@
           				</a>
 				</small></div>
 				</th>
+				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>DEPTH</small></div>
+				</th>
+				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>INJ</small></div>
+				</th>
 				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>TEAM</small></div>
 				</th>
 				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>DEF</small></div>
@@ -171,6 +175,8 @@
 				<td>{{row.fl}}</td>
 				<td>{{row.fpts}}</td>
 				<td>{{row.st_marys}}</td>
+				<td ng-class = "{green_cell:row.string == 1,lightgreen_cell:(row.string == 1.25) || ((row.string == 1.5 || row.string == 1.75)&& (row.pos == 'WR' || row.pos == 'TE')),yellow_cell:((row.string == 1.5 || row.string == 1.75) && row.pos == 'RB') || ((row.string == 2 || row.string == 2.25) && ((row.pos == 'WR') || (row.pos == 'TE'))),orange_cell:(row.string == 2 && row.pos == 'RB') || ((row.string == 2.5 || row.string == 2.75) && ((row.pos == 'WR') || (row.pos == 'TE'))),red_cell:(row.string > 2 && row.pos == 'RB') || (row.string > 2.75 && ((row.pos == 'WR') || (row.pos == 'TE'))) || (row.string > 1 && row.pos == 'QB')}" ng-init = "multifunc()">{{row.string}}</td>
+				<td ng-class = "{red_cell:row.inj == 'INJ'}">{{row.inj}}</td>
 				<td ng-class = "{green_cell:isgood,red_cell:isbad}">{{teams(row.team)}}</td>
 				<td ng-class = "{green_cell:(isbad && !isrb) || (isgood && isrb),red_cell:(isgood && !isrb) || (isbad && isrb)}">{{defenses(row.team)}}</td>
 				<td ng-class = "{green_cell:isgood,red_cell:isbad}">{{ols(row.team)}}</td>
