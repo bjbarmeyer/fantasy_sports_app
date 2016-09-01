@@ -15,8 +15,31 @@ h2 {
 	color: #000000;
 }
 
+tr {
+width: 100%;
+display: inline-table;
+table-layout: fixed;
+}
+
+thead{
+	width:500px;
+}
+
+table{
+ height:100%;   
+ border-collapse: collapse;
+ table-layout: fixed;
+ empty-cells: show;          
+}
+tbody{
+  overflow-y: scroll;      
+  height: 77%;         
+  width: 100%;
+  position: absolute;
+}
+
 .selected {
-  background-color: red;
+  background-color: #e8e8e8;
 }
 
 #btn_normal {
@@ -39,12 +62,32 @@ h2 {
 	background-color: '';
 }
 
-.r_picked {
-	background-color:#58D68D;
-}
-
 .r_taken {
 	background-color: #EC7063;
+}
+
+.r_bpicked {
+	background-color:#81D4FA;
+}
+
+.r_bwatch {
+	background-color:#E1F5FE;
+}
+
+.r_apicked {
+	background-color:#FFE082;
+}
+
+.r_awatch {
+	background-color:#FFF8E1;
+}
+
+.r_gpicked {
+	background-color:#A5D6A7;
+}
+
+.r_gwatch {
+	background-color:#E8F5E9;
 }
 
 .r_watch {
@@ -82,4 +125,33 @@ h2 {
 
 .invisible {
 	visibility: hidden;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+
+.namecol {
+	width:19%;
+}
+
+.gencol {
+	width:5%;
+	text-align: center;
+}
+
+.speccol {
+	width:5%;
+	font-weight: bold;
+	text-align: center;
+}
+
+.spacecol {
+	width:1%;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	visibility: hidden;
+}
+
+.smallcol {
+	width:3%;
+	text-align: center;
 }

@@ -10,200 +10,218 @@
     </ul>
 </div>
 
-<!--<div>
-	<div style="padding:2px;">
-		<button ng-click="togg(); findAndReplace(rowCollection, ' Cam Newton ', 'picked')" style="padding-left:8px; padding-right:8px;" class="btn btn-md btn-success" onclick="findAndReplace(rowCollection, 'QB', 'picked')">Pick</button>
-		<button ng-click="r_taken=true; r_picked=false; r_watch=false; r_normal=false;" style="padding-left:4px; padding-right:4px;" class="btn btn-md btn-danger">Taken</button>
-		<button ng-click="r_watch=true; r_picked=false; r_taken=false; r_normal=false;" style="padding-left:3px; padding-right:3px;" class="btn btn-md btn-warning">Watch</button>
-		<button ng-click="r_normal=true; r_picked=false; r_taken=false; r_watch=false;" style="padding-left:5px; padding-right:5px;" class="btn btn-md btn-default">Reset</button>
+<div>
+	<div style="padding-top: 10px;">
+		<a style = "padding-left: 7%; padding-right: 7%;">
+		<button ng-click="colorRow('reset')" style="padding-left:5px; padding-right:5px;" class="btn btn-md btn-default">Reset</button>
+		<button ng-click="colorRow('taken')" style="padding-left:7px; padding-right:7px;" class="btn btn-md btn-danger">Taken</button>
+		</a>
+		<a style = "padding-left: 7%; padding-right: 7%;">
+		<button ng-click="colorRow('bpicked')" style="padding-left:8px; padding-right:8px;" class="btn btn-md btn-success">Britt Pick</button>
+		<button ng-click="colorRow('bwatch')" style="padding-left:3px; padding-right:3px;" class="btn btn-md btn-warning">Britt Watch</button>
+		</a>
+		<a style = "padding-left: 7%; padding-right: 7%;">
+		<button ng-click="colorRow('apicked')" style="padding-left:8px; padding-right:8px;" class="btn btn-md btn-success" >Andy Pick</button>
+		<button ng-click="colorRow('awatch')" style="padding-left:3px; padding-right:3px;" class="btn btn-md btn-warning">Andy Watch</button>
+		</a>
+		<a style = "padding-left: 7%;">
+		<button ng-click="colorRow('gpicked')" style="padding-left:8px; padding-right:8px;" class="btn btn-md btn-success" >Gramps Pick</button>
+		<button ng-click="colorRow('gwatch')" style="padding-left:3px; padding-right:3px;" class="btn btn-md btn-warning">Gramps Watch</button>
+		</a>
+		
 	</div>
-</div>-->
+</div>
 
-<div class="mobile-table">
-    <table st-table="rowCollection" cellpadding="0" cellspacing="0" border="0" id="data" class="table table-bordered table-condensed table-hover tablesorter">
+<div class="table-responsive" style="width:99%;">
+    <table st-table="rowCollection" id="data" class="table table-hover table-condensed" >
         <thead>
             <tr>
-            	<td colspan="2" data-column="0">&nbsp;</td>
-            	<td colspan="5" style="text-align:center;" data-column="3"><small><b>PASSING</b></small></td>
-            	<td colspan="3" style="text-align:center;" data-column="8"><small><b>RUSHING</b></small></td>
-            	<td colspan="3" style="text-align:center;" data-column="11"><small><b>RECEIVING</b></small></td>
-            	<td colspan="8" style="text-align:center;" data-column="14"><small><b>MISC</b></small></td>
+            	<td colspan="2" data-column="0" style="width:16%;">&nbsp;</td>
+            	<td colspan="1" data-column="2" style="width:1%;">&nbsp;</td>
+            	<td colspan="5" style="text-align:center;" data-column="3" style="width:25%;"><small><b>PASSING</b></small></td>
+            	<td colspan="1" data-column="2" style="width:1%;">&nbsp;</td>
+            	<td colspan="3" style="text-align:center;" data-column="8" style="width:15%;"><small><b>RUSHING</b></small></td>
+            	<td colspan="1" data-column="2" style="width:1%;">&nbsp;</td>
+            	<td colspan="3" style="text-align:center;" data-column="11" style="width:15%;"><small><b>RECEIVING</b></small></td>
+            	<td colspan="1" data-column="2" style="width:1%;">&nbsp;</td>
+            	<td colspan="11" style="text-align:center;" data-column="14" style="width:55%;"><small><b>MISC</b></small></td>
+            	<td colspan="1" data-column="2" style="width:1%;">&nbsp;</td>
             </tr>
-            <tr class="tablesorter-header">
-            	<th style="width:10px;" data-column="0" class="tablesorter-header">
-            		<div class="tablesorter-header-inner"><small>RNK</small></div>
+            <tr >
+            	<th data-column="0" class="smallcol">
+            		<div ><small>RNK</small></div>
             	</th>
-            	<th style="width:120px" data-column="1" class="tablesorter-header">
-            		<div class="tablesorter-header-inner">
+            	<th data-column="1" class ="namecol">
+            		<div >
             			<a ng-click="sortType = 'name'; sortReverse = !sortReverse">Player 
 				            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
 				            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
           				</a>
           			</div>
             	</th>
-            	<th style="width:40px;" data-column="3" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
+            	<th data-column="2" class="invisible spacecol"></th>
+            	<th data-column="3" class="gencol"><div ><small>
 						<a ng-click="sortType = 'att'; sortReverse = !sortReverse">ATT
 				            <span ng-show="sortType == 'att' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'att' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 					</small></div>
 				</th>
-				<th style="width:40px;" data-column="4" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
+				<th data-column="4" class="gencol"><div ><small>
 						<a ng-click="sortType = 'comp'; sortReverse = !sortReverse">COMP
 				            <span ng-show="sortType == 'comp' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'comp' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 					</small></div>
 				</th>
-				<th style="width:40px;" data-column="5" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
-						<a ng-click="sortType = 'p_yds'; sortReverse = !sortReverse">PASS YDS
+				<th data-column="5" class="gencol"><div ><small>
+						<a ng-click="sortType = 'p_yds'; sortReverse = !sortReverse">YDS
 				            <span ng-show="sortType == 'p_yds' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'p_yds' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 					</small></div>
 				</th>
-				<th style="width:40px;" data-column="6" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
-						<a ng-click="sortType = 'p_td'; sortReverse = !sortReverse">PASS TD
+				<th data-column="6" class="gencol"><div ><small>
+						<a ng-click="sortType = 'p_td'; sortReverse = !sortReverse">TD
 				            <span ng-show="sortType == 'p_td' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'p_td' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 					</small></div>
 				</th>
-				<th style="width:40px;" data-column="7" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
+				<th data-column="7" class="gencol"><div ><small>
 						<a ng-click="sortType = 'int'; sortReverse = !sortReverse">INT
 				            <span ng-show="sortType == 'int' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'int' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="8" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
+				<th data-column="8" class="invisible spacecol"></th>
+				<th data-column="8" class="gencol"><div ><small>
 						<a ng-click="sortType = 'rush'; sortReverse = !sortReverse">RUSH
 				            <span ng-show="sortType == 'rush' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'rush' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="9" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
-						<a ng-click="sortType = 'ru_yds'; sortReverse = !sortReverse">RUSH YDS
+				<th data-column="9" class="gencol"><div ><small>
+						<a ng-click="sortType = 'ru_yds'; sortReverse = !sortReverse">YDS
 				            <span ng-show="sortType == 'ru_yds' && sortReverse" class="fa fa-caret-down"></span>
 				            <span ng-show="sortType == 'ru_yds' && !sortReverse" class="fa fa-caret-up"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="10" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
-						<a ng-click="sortType = 'ru_td'; sortReverse = !sortReverse">RUSH TD
+				<th data-column="10" class="gencol"><div ><small>
+						<a ng-click="sortType = 'ru_td'; sortReverse = !sortReverse">TD
 				            <span ng-show="sortType == 'ru_td' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'ru_td' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="11" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
+				<th data-column="2" class="invisible spacecol"></th>
+				<th data-column="11" class="gencol"><div ><small>
 						<a ng-click="sortType = 'rec'; sortReverse = !sortReverse">REC
 				            <span ng-show="sortType == 'rec' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'rec' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="12" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
-						<a ng-click="sortType = 're_yds'; sortReverse = !sortReverse">REC YDS
+				<th data-column="12" class="gencol"><div ><small>
+						<a ng-click="sortType = 're_yds'; sortReverse = !sortReverse">YDS
 				            <span ng-show="sortType == 're_yds' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 're_yds' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="13" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
-						<a ng-click="sortType = 're_td'; sortReverse = !sortReverse">REC TD
+				<th data-column="13" class="gencol"><div ><small>
+						<a ng-click="sortType = 're_td'; sortReverse = !sortReverse">TD
 				            <span ng-show="sortType == 're_td' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 're_td' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="14" class="tablesorter-header"><div class="tablesorter-header-inner"><small>
+				<th data-column="2" class="invisible spacecol"></th>
+				<th data-column="14" class="gencol"><div ><small>
 						<a ng-click="sortType = 'fl'; sortReverse = !sortReverse">FL
 				            <span ng-show="sortType == 'fl' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'fl' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="15" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>
+				<th data-column="15" class="gencol"><div ><small>
 						<a ng-click="sortType = 'fpts'; sortReverse = !sortReverse">FPTS
 				            <span ng-show="sortType == 'fpts' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'fpts' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="16" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>
-						<a ng-click="sortType = 'st_marys'; sortReverse = !sortReverse">ST. MARY
+				<th data-column="16" class="gencol"><div ><small>
+						<a ng-click="sortType = 'st_marys'; sortReverse = !sortReverse">ST. M
 				            <span ng-show="sortType == 'st_marys' && !sortReverse" class="fa fa-caret-up"></span>
 				            <span ng-show="sortType == 'st_marys' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>DEPTH</small></div>
+				<th data-column="2" class="invisible spacecol"></th>
+				<th data-column="17" class = "gencol"><div ><small>STR</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>INJ</small></div>
+				<th data-column="17" class = "gencol"><div ><small>INJ</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>TEAM</small></div>
+				<th data-column="17" class = "gencol"><div ><small>TEAM</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>DEF</small></div>
+				<th data-column="17" class = "gencol"><div ><small>DEF</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>OL</small></div>
+				<th data-column="17" class = "gencol"><div ><small>OL</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>QB's</small></div>
+				<th data-column="17" class = "gencol"><div ><small>QB's</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>RB's</small></div>
+				<th data-column="17" class = "gencol"><div ><small>RB's</small></div>
 				</th>
-				<th style="width:40px;" data-column="17" class="tablesorter-header tablesorter-headerSortUp"><div class="tablesorter-header-inner"><small>REC's</small></div>
+				<th data-column="17" class = "gencol"><div ><small>REC's</small></div>
 				</th>
+				<th data-column="2" class="invisible spacecol"></th>
 			</tr>          
 		</thead>
+	</table>
+		<table st-table="rowCollection" id="data" class="table table-hover table-condensed" >
         <tbody class="bod">
-          	<tr ng-class = "{r_picked:row.status == 1,r_taken:row.status == 2,r_watch:row.status == 3, r_normal:row.status == 0}" ng-repeat="row in rowCollection | orderBy:sortType:sortReverse | filter:posFilter" ng-click="togg(row);">
-          		<td>{{$index + 1}}</td>
-          		<td><a>{{row.name}}</a><small style="color:#888888;"> {{findPos(row.pos)}}, {{row.team}}</small></td>
-				<td>{{row.att}}</td>
-				<td>{{row.comp}}</td>
-				<td>{{row.p_yds}}</td>
-				<td>{{row.p_td}}</td>
-				<td>{{row.int}}</td>
-				<td>{{row.rush}}</td>
-				<td>{{row.ru_yds}}</td>
-				<td>{{row.ru_td}}</td>
-				<td>{{row.rec}}</td>
-				<td>{{row.re_yds}}</td>
-				<td>{{row.re_td}}</td>
-				<td>{{row.fl}}</td>
-				<td>{{row.fpts}}</td>
-				<td>{{row.st_marys}}</td>
-				<td ng-class = "{green_cell:row.string == 1,lightgreen_cell:(row.string == 1.25) || ((row.string == 1.5 || row.string == 1.75)&& (row.pos == 'WR' || row.pos == 'TE')),yellow_cell:((row.string == 1.5 || row.string == 1.75) && row.pos == 'RB') || ((row.string == 2 || row.string == 2.25) && ((row.pos == 'WR') || (row.pos == 'TE'))),orange_cell:(row.string == 2 && row.pos == 'RB') || ((row.string == 2.5 || row.string == 2.75) && ((row.pos == 'WR') || (row.pos == 'TE'))),red_cell:(row.string > 2 && row.pos == 'RB') || (row.string > 2.75 && ((row.pos == 'WR') || (row.pos == 'TE'))) || (row.string > 1 && row.pos == 'QB')}" ng-init = "multifunc()">{{row.string}}</td>
-				<td ng-class = "{red_cell:row.inj == 'INJ'}">{{row.inj}}</td>
-				<td ng-class = "{green_cell:isgood,red_cell:isbad}">{{teams(row.team)}}</td>
-				<td ng-class = "{green_cell:(isbad && !isrb) || (isgood && isrb),red_cell:(isgood && !isrb) || (isbad && isrb)}">{{defenses(row.team)}}</td>
-				<td ng-class = "{green_cell:isgood,red_cell:isbad}">{{ols(row.team)}}</td>
-				<td ng-class = "{green_cell:(isgood && !isrb) || (isbad && isrb),red_cell:(isbad && !isrb) || (isgood && isrb),  invisible:pos_val == 0}">{{qbs(row.team)}}</td>
-				<td ng-class = "{green_cell:(isbad && !isrb) || (isgood && isrb),red_cell:(isgood && !isrb) || (isbad && isrb),  invisible:pos_val == 1}">{{rbs(row.team)}}</td>
-				<td ng-class = "{green_cell:(isgood && !isrb) || (isbad && isrb),red_cell:(isbad && !isrb) || (isgood && isrb), invisible:(pos_val == 2) || (pos_val == 3)}">{{receivers(row.team)}}</td>
+          	<tr ng-click="setSelected(row.name)" ng-class = "{r_normal:row.status == 0,r_taken:row.status == 1,r_bpicked:row.status == 2, r_bwatch:row.status == 3, r_apicked:row.status == 4,r_awatch:row.status == 5, r_gpicked:row.status == 6, r_gwatch:row.status == 7, selected:row.name === idSelectedRow}" ng-repeat="row in rowCollection | orderBy:sortType:sortReverse | filter:posFilter">
+          		<td class="smallcol">{{$index + 1}}</td>
+          		<td class="namecol"><a>{{row.name}}</a><small style="color:#888888;"> {{findPos(row.pos)}}, {{row.team}}</small></td>
+				<td class="spacecol"></td>
+				<td class="gencol">{{row.att}}</td>
+				<td class="gencol">{{row.comp}}</td>
+				<td class="gencol">{{row.p_yds}}</td>
+				<td class="gencol">{{row.p_td}}</td>
+				<td class="gencol">{{row.int}}</td>
+				<td class="spacecol"></td>
+				<td class="gencol">{{row.rush}}</td>
+				<td class="gencol">{{row.ru_yds}}</td>
+				<td class="gencol">{{row.ru_td}}</td>
+				<td class="spacecol"></td>
+				<td class="gencol">{{row.rec}}</td>
+				<td class="gencol">{{row.re_yds}}</td>
+				<td class="gencol">{{row.re_td}}</td>
+				<td class="spacecol"></td>
+				<td class="gencol">{{row.fl}}</td>
+				<td class="gencol">{{row.fpts}}</td>
+				<td class="gencol">{{row.st_marys}}</td>
+				<td class="spacecol"></td>
+				<td class="gencol" ng-class = "{green_cell:row.string == 1,lightgreen_cell:(row.string == 1.25) || ((row.string == 1.5 || row.string == 1.75) && (row.pos == 'WR' || row.pos == 'TE')),yellow_cell:((row.string == 1.5 || row.string == 1.75) && row.pos == 'RB') || ((row.string == 2 || row.string == 2.25) && ((row.pos == 'WR') || (row.pos == 'TE'))),orange_cell:(row.string == 2 && row.pos == 'RB') || ((row.string == 2.5 || row.string == 2.75) && ((row.pos == 'WR') || (row.pos == 'TE'))),red_cell:(row.string > 2 && row.pos == 'RB') || (row.string > 2.75 && ((row.pos == 'WR') || (row.pos == 'TE'))) || (row.string > 1 && row.pos == 'QB')}" ng-init = "multifunc()">{{row.string}}</td>
+				<td class="gencol" ng-class = "{red_cell:row.inj == 'INJ'}">{{row.inj}}</td>
+				<td class="speccol" ng-class = "{green_cell:isgood,red_cell:isbad}">{{teams(row.team)}}</td>
+				<td class="speccol" ng-class = "{green_cell:(isbad && !isrb) || (isgood && isrb),red_cell:(isgood && !isrb) || (isbad && isrb)}">{{defenses(row.team)}}</td>
+				<td class="speccol" ng-class = "{green_cell:isgood,red_cell:isbad}">{{ols(row.team)}}</td>
+				<td class="speccol" ng-class = "{green_cell:(isgood && !isrb) || (isbad && isrb),red_cell:(isbad && !isrb) || (isgood && isrb),  invisible:pos_val == 0}">{{qbs(row.team)}}</td>
+				<td class="speccol" ng-class = "{green_cell:(isbad && !isrb) || (isgood && isrb),red_cell:(isgood && !isrb) || (isbad && isrb),  invisible:pos_val == 1}">{{rbs(row.team)}}</td>
+				<td class="speccol" ng-class = "{green_cell:(isgood && !isrb) || (isbad && isrb),red_cell:(isbad && !isrb) || (isgood && isrb), invisible:(pos_val == 2) || (pos_val == 3)}">{{receivers(row.team)}}</td>
+				<td class="spacecol"></td>
 
 			</tr>
 		</tbody>
-	</table>
+		</table>
 </div>
 </div>
 
 <script>
-
-	
-	
-    /*$(document).ready(function(){
-    	$("#data td.defense_cell:contains('Good')").css('color','red');
-	});
-
-	$(document).ready(function(){
-	    $('#data td.defense_cell').each(function(){
-	        if ($(this).text() == 'Good') {
-	            $(this).css('background-color','#f00');
-	        }
-	    });
-	});*/
 	
 </script>
