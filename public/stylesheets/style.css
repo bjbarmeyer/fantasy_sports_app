@@ -63,23 +63,31 @@ tbody{
 }
 
 .r_taken {
-	background-color: #EC7063;
-}
-
-.r_bpicked {
-	background-color:#81D4FA;
-}
-
-.r_bwatch {
-	background-color:#E1F5FE;
+	background-color: #656565;
 }
 
 .r_apicked {
-	background-color:#FFE082;
+	background-color:#81D4FA;
 }
 
 .r_awatch {
-	background-color:#FFF8E1;
+	background-color:#E1F5FE;
+}
+
+.r_awatch {
+	background-color:#E1F5FE;
+}
+
+.r_bpicked {
+	background-color:#BB8FCE;
+}
+
+.r_bwatch {
+	background-color:#E8DAEF;
+}
+
+.r_bwatch {
+	background-color:#E8DAEF;
 }
 
 .r_gpicked {
@@ -90,8 +98,8 @@ tbody{
 	background-color:#E8F5E9;
 }
 
-.r_watch {
-	background-color: #F7DC6F;
+.r_gwatch {
+	background-color:#E8F5E9;
 }
 
 .defense_cell {

@@ -1,0 +1,158 @@
+<div ng-app="dailyfantasyfootball2" ng-controller="controller">
+<div>
+	<ul class="nav nav-tabs">
+		<li><a href="#all" class="btn btn-def" ng-click="posFilter.pos2 = ''">All</a></li>
+		<li><a href="#qb" class="btn btn-def" ng-click="posFilter.pos2 = 'QB'">QB</a></li>
+		<li><a href="#rb" class="btn btn-def" ng-click="posFilter.pos2 = 'RB'">RB</a></li>
+		<li><a href="#wr" class="btn btn-def" ng-click="posFilter.pos2 = 'WR'">WR</a></li>
+		<li><a href="#te" class="btn btn-def" ng-click="posFilter.pos2 = 'TE'">TE</a></li>
+		<li><a href="#flex" class="btn btn-def" ng-click="posFilter.pos2 = 'FLEX'">FLEX</a></li>
+		<li><a href="#dst" class="btn btn-def" ng-click="posFilter.pos2 = 'DST'">D/ST</a></li>
+    </ul>
+</div>
+
+<!--<div>
+	<div style="padding:2px;">
+		<button ng-click="togg(); findAndReplace(rowCol, ' Cam Newton ', 'picked')" style="padding-left:8px; padding-right:8px;" class="btn btn-md btn-success" onclick="findAndReplace(rowCol, 'QB', 'picked')">Pick</button>
+		<button ng-click="r_taken=true; r_picked=false; r_watch=false; r_normal=false;" style="padding-left:4px; padding-right:4px;" class="btn btn-md btn-danger">Taken</button>
+		<button ng-click="r_watch=true; r_picked=false; r_taken=false; r_normal=false;" style="padding-left:3px; padding-right:3px;" class="btn btn-md btn-warning">Watch</button>
+		<button ng-click="r_normal=true; r_picked=false; r_taken=false; r_watch=false;" style="padding-left:5px; padding-right:5px;" class="btn btn-md btn-default">Reset</button>
+	</div>
+</div>-->
+
+<div class="table-responsive" style="width:99%;">
+    <table st-table="rowCol" class="table table-hover table-condensed" >
+        <thead>
+            <tr>
+            	<td colspan="2" data-column="0" style="width:16%;"><button ng-click="lineupGen()" class="btn btn-success">Generate Lineups</button></td>
+            	<td colspan="4" data-column="2" style="width:16%;"><button ng-click="lineupGenSunday('WSHx','CARx','NYJx','MIAx')" class="btn btn-success">Generate Sunday Lineups</button></td>
+            	<td colspan="4" data-column="2" style="width:16%;"><button ng-click="lineupGenPrime('CAR','WSH','TB','DAL')" class="btn btn-success">Generate Primetime Lineups</button></td>
+            	<td colspan="4" data-column="2" style="width:16%;"><button ng-click="lineupGenQB('Aaron Rodgers','WSHx','xCAR','xNYJ','xMIA')" class="btn btn-success">Generate QB Lineups</button></td>
+            	<td colspan="4" data-column="2" style="width:16%;"><button ng-click="lineupGenRB('Melvin Gordon')" class="btn btn-success">Generate RB Lineups</button></td>
+            </tr>
+            <tr >
+            	<th data-column="0" class="smallcol">
+            		<div ><small>RNK</small></div>
+            	</th>
+            	<th data-column="1" class ="namecol">
+            		<div >
+            			<a ng-click="sortType = 'name'; sortReverse = !sortReverse">Player 
+				            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+				            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+          				</a>
+          			</div>
+            	</th>
+            	<th data-column="6" class="invisible spacecol"></th>
+            	<th data-column="2" class="gencol"><div ><small>
+						<a ng-click="sortType = 'time'; sortReverse = !sortReverse">KICKOFF
+				            <span ng-show="sortType == 'time' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'time' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="3" class="gencol"><div ><small>
+						<a ng-click="sortType = 'opp'; sortReverse = !sortReverse">OPP
+				            <span ng-show="sortType == 'opp' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'opp' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="4" class="gencol"><div ><small>
+						<a ng-click="sortType = 'spread'; sortReverse = !sortReverse">SPREAD
+				            <span ng-show="sortType == 'spread' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'spread' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="5" class="gencol"><div ><small>
+						<a ng-click="sortType = 'ou'; sortReverse = !sortReverse">O/U
+				            <span ng-show="sortType == 'ou' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'ou' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="7" class="gencol"><div ><small>
+						<a ng-click="sortType = 'score'; sortReverse = !sortReverse">SCORE
+				            <span ng-show="sortType == 'score' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'score' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="6" class="invisible spacecol"></th>
+				<th data-column="8" class="gencol"><div ><small>
+						<a ng-click="sortType = 'pts_rank'; sortReverse = !sortReverse">FPTS RANK
+				            <span ng-show="sortType == 'pts_rank' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'pts_rank' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="9" class="gencol"><div ><small>
+						<a ng-click="sortType = 'sal_rank'; sortReverse = !sortReverse">SALARY RANK
+				            <span ng-show="sortType == 'sal_rank' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'sal_rank' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="10" class="gencol"><div ><small>
+						<a ng-click="sortType = 'diff'; sortReverse = !sortReverse">DIFF
+				            <span ng-show="sortType == 'diff' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'diff' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+					</small></div>
+				</th>
+				<th data-column="12" class="invisible spacecol"></th>
+				<th data-column="11" class="gencol"><div ><small>
+						<a ng-click="sortType = 'fpts'; sortReverse = !sortReverse">FPTS
+				            <span ng-show="sortType == 'fpts' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'fpts' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+				</small></div>
+				</th>
+				<th data-column="13" class="gencol"><div ><small>
+						<a ng-click="sortType = 'salary'; sortReverse = !sortReverse">SALARY
+				            <span ng-show="sortType == 'salary' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'salary' && sortReverse" class="fa fa-caret-down"></span>
+          				</a>
+				</small></div>
+				</th>
+				<th data-column="14" class="gencol"><div ><small>
+						<a ng-click="sortType = 'cpp'; sortReverse = !sortReverse">CPP
+				            <span ng-show="sortType == 'cpp' && sortReverse" class="fa fa-caret-down"></span>
+				            <span ng-show="sortType == 'cpp' && !sortReverse" class="fa fa-caret-up"></span>
+          				</a>
+				</small></div>
+				</th>
+				<th data-column="26" class="invisible spacecol"></th>
+			</tr>          
+		</thead>
+	</table>
+		<table st-table="rowCol" class="table table-hover table-condensed" >
+        <tbody class="bod">
+          	<tr ng-class = "{r_picked:row.status == 1,r_taken:row.status == 2,r_watch:row.status == 3, r_normal:row.status == 0}" ng-repeat="row in rowCol | orderBy:sortType:sortReverse | filter:posFilter" ng-click="togg(row);">
+          		<td class="smallcol">{{$index + 1}}</td>
+          		<td class ="namecol"><a>{{row.name}}</a><small style="color:#888888;"> {{findPos(row.pos)}}, {{row.team}}</small></td>
+          		<td class="spacecol"></td>
+				<td class="gencol">{{row.time}}</td>
+				<td class="gencol">{{row.opp}}</td>
+				<td class="gencol">{{row.spread}}</td>
+				<td class="gencol">{{row.ou}}</td>
+				<td class="gencol">{{row.score}}</td>
+				<td class="spacecol"></td>
+				<td class="gencol">{{row.pts_rank}}</td>
+				<td class="gencol">{{row.sal_rank}}</td>
+				<td class="gencol">{{row.diff}}</td>
+				<td class="spacecol"></td>
+				<td class="gencol">{{row.fpts}}</td>
+				<td class="gencol">${{row.salary}}</td>
+				<td class="gencol">${{row.cpp}}</td>
+				<td class="spacecol"></td>
+
+			</tr>
+		</tbody>
+		</table>
+</div>
+</div>
+
+<script>
+	
+</script>

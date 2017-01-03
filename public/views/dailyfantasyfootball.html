@@ -6,7 +6,7 @@
 		<li><a href="#rb" class="btn btn-def" ng-click="posFilter.pos = 'RB'">RB</a></li>
 		<li><a href="#wr" class="btn btn-def" ng-click="posFilter.pos = 'WR'">WR</a></li>
 		<li><a href="#te" class="btn btn-def" ng-click="posFilter.pos = 'TE'">TE</a></li>
-		<li><a href="#k" class="btn btn-def" ng-click="posFilter.pos = 'K'">K</a></li>
+		<li><a href="#dst" class="btn btn-def" ng-click="posFilter.pos = 'D/ST'">D/ST</a></li>
     </ul>
 </div>
 
@@ -186,9 +186,9 @@
 				</small></div>
 				</th>
 				<th data-column="25" class="gencol"><div ><small>
-						<a ng-click="sortType = 'val'; sortReverse = !sortReverse">VAL
-				            <span ng-show="sortType == 'val' && !sortReverse" class="fa fa-caret-up"></span>
-				            <span ng-show="sortType == 'val' && sortReverse" class="fa fa-caret-down"></span>
+						<a ng-click="sortType = 'value'; sortReverse = !sortReverse">VAL
+				            <span ng-show="sortType == 'value' && !sortReverse" class="fa fa-caret-up"></span>
+				            <span ng-show="sortType == 'value' && sortReverse" class="fa fa-caret-down"></span>
           				</a>
 				</small></div>
 				</th>
